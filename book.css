@@ -13,6 +13,7 @@
     --secondary: #D8A24A;
 
     --dark: #17231B;
+
     --text: #4B574F;
     --muted: #7B857E;
 
@@ -28,13 +29,22 @@
     --input-bg: #F8F7F1;
 
     --shadow:
-        0 20px 60px rgba(23,35,27,0.12);
+        0 20px 60px rgba(23, 35, 27, 0.12);
 
     --transition: 0.35s ease;
 
-    --heading-font: "Cormorant Garamond", serif;
-    --body-font: "DM Sans", sans-serif;
-    --serif-font: "DM Serif Display", serif;
+    --heading-font:
+        "Cormorant Garamond",
+        serif;
+
+    --body-font:
+        "DM Sans",
+        sans-serif;
+
+    --serif-font:
+        "DM Serif Display",
+        serif;
+
 }
 
 
@@ -43,21 +53,28 @@
 ========================================================= */
 
 * {
+
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 
 html,
 body {
+
     width: 100%;
     height: 100%;
+
 }
 
 
 html {
+
     overflow: hidden;
+
 }
 
 
@@ -78,19 +95,25 @@ body {
     transition:
         background 0.35s ease,
         color 0.35s ease;
+
 }
 
 
 button,
 input,
 select {
+
     font-family: inherit;
+
 }
 
 
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
 
 
@@ -111,6 +134,7 @@ a {
         1.25fr 0.75fr;
 
     overflow: hidden;
+
 }
 
 
@@ -128,8 +152,13 @@ a {
     overflow: hidden;
 
     color: white;
+
 }
 
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
 
 .visual-bg {
 
@@ -148,28 +177,36 @@ a {
         farmMove 16s ease-in-out infinite alternate;
 
     transform-origin: center;
+
 }
 
 
 @keyframes farmMove {
 
     0% {
+
         transform:
             scale(1.03)
             translate3d(0, 0, 0);
+
     }
 
     50% {
+
         transform:
             scale(1.08)
             translate3d(-1%, -0.5%, 0);
+
     }
 
     100% {
+
         transform:
             scale(1.12)
             translate3d(1%, 0.5%, 0);
+
     }
+
 }
 
 
@@ -186,10 +223,11 @@ a {
     background:
         linear-gradient(
             90deg,
-            rgba(16,53,32,0.94) 0%,
-            rgba(25,75,46,0.78) 45%,
-            rgba(20,59,37,0.45) 100%
+            rgba(16, 53, 32, 0.94) 0%,
+            rgba(25, 75, 46, 0.78) 45%,
+            rgba(20, 59, 37, 0.45) 100%
         );
+
 }
 
 
@@ -218,87 +256,336 @@ a {
     flex-direction: column;
 
     justify-content: space-between;
+
 }
 
 
 /* =========================================================
-   LOGO
+   PAWNEST LOGO
 ========================================================= */
 
-.booking-logo {
+/*.booking-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: max-content;
+
+    text-decoration: none;
+
+    line-height: 1;
+
+    margin-bottom: 24px;
+
+}
+
+
+.booking-logo-image {
+
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #FFFFFF;
+
+    border:
+        2px solid
+        var(--secondary);
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.booking-logo:hover
+.booking-logo-image {
+
+    transform:
+        scale(1.05)
+        rotate(-3deg);
+
+}
+
+
+.booking-logo-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.booking-logo-brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1;
+
+}
+
+
+.booking-logo-text {
+
+    display: inline-flex;
+
+    align-items: baseline;
+
+    font-family:
+        var(
+            --heading-font,
+            "Cormorant Garamond",
+            serif
+        );
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.02em;
+
+    white-space: nowrap;
+
+}
+
+
+.logo-main {
+
+    color: #FFFFFF;
+
+}
+
+
+.logo-accent {
+
+    color: #F0C66E;
+
+}
+
+
+.booking-logo-brand small {
+
+    display: block;
+
+    margin-top: 3.5px;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #B5D2BF;
+
+    letter-spacing: 0.08em;
+
+    white-space: nowrap;
+
+}*/
+.logo {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     width: max-content;
+    flex-shrink: 0;
     text-decoration: none;
     line-height: 1;
-    margin-bottom: 24px;
 }
 
-.booking-logo-image {
+.logo-image {
     width: 60px;
     height: 60px;
     flex-shrink: 0;
     overflow: hidden;
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 2px solid var(--secondary);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 2px solid #D8A24A;
+    box-shadow: 0 4px 14px rgba(20, 56, 33, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
-.booking-logo:hover .booking-logo-image {
+.logo:hover .logo-image {
     transform: scale(1.05) rotate(-3deg);
+    box-shadow: 0 6px 18px rgba(216, 162, 74, 0.3);
 }
-
-.booking-logo-image img {
+.logo-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
+    object-fit: cover;
 }
 
-.booking-logo-brand {
+.logo-brand {
     display: flex;
     flex-direction: column;
     justify-content: center;
     line-height: 1;
+    min-width: max-content;
 }
-
-.booking-logo-text {
+.logo-text {
     display: inline-flex;
     align-items: baseline;
-    font-family: var(--heading-font, "Cormorant Garamond", serif);
+    white-space: nowrap;
     font-size: 30px;
     font-weight: 700;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
+    line-height: 1;
+    
+}
+.logo-main::first-letter {
+    position: relative;
+    top: -8px;
 }
 
 .logo-main {
-    color: #FFFFFF;
+    color: white !important;
 }
 
 .logo-accent {
-    color: #F0C66E;
+    color: #D8A24A !important;
 }
-
-.booking-logo-brand small,
-.booking-logo-brand .logo-caption {
+.logo-caption {
     display: block;
-    margin-top: 3.5px;
+    margin-top: 1.5px;
     font-family: "DM Sans", sans-serif;
-    font-size: 10.5px;
+    font-size: 11px;
     line-height: 1.2;
     font-weight: 600;
-    color: #B5D2BF;
     letter-spacing: 0.01em;
+    color:  #B5D2BF;
     white-space: nowrap;
+    transition: color 0.3s ease;
+    transform: translateX(5px);
+    
 }
+
+body.dark-mode .logo-main {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode .logo-accent {
+    color: #F5CE76 !important;
+}
+
+body.dark-mode .logo-caption {
+    color: #B5D2BF;
+}
+
+body.dark-mode .logo-image {
+    background: #11281A;
+    border-color: #D8A24A;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+    .header {
+        height: 72px;
+    }
+
+    .container,
+    .header-container {
+        width: min(100% - 32px, 1240px);
+    }
+
+    .header-container {
+        height: 72px;
+        min-height: 72px;
+    }
+
+    .logo,
+    .footer-logo {
+        gap: 11px;
+    }
+
+    .logo-image,
+    .footer-logo-image {
+        width: 44px;
+        height: 44px;
+    }
+
+    .logo-text,
+    .footer-logo-text {
+        font-size: 28px;
+    }
+
+    .logo-caption,
+    .footer-logo-caption {
+        font-size: 9.5px;
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 68px;
+    }
+
+    .container,
+    .header-container {
+        width: calc(100% - 24px);
+    }
+
+    .header-container {
+        height: 68px;
+        min-height: 68px;
+    }
+
+    .logo,
+    .footer-logo {
+        gap: 9px;
+    }
+
+    .logo-image,
+    .footer-logo-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text,
+    .footer-logo-text {
+        font-size: 25px;
+    }
+
+    .logo-caption,
+    .footer-logo-caption {
+        font-size: 9px;
+        margin-top: 2.5px;
+    }
+}
+
 
 
 /* =========================================================
@@ -312,6 +599,7 @@ a {
     margin-top: auto;
 
     margin-bottom: auto;
+
 }
 
 
@@ -328,12 +616,12 @@ a {
 
     border:
         1px solid
-        rgba(216,162,74,0.75);
+        rgba(216, 162, 74, 0.75);
 
     border-radius: 999px;
 
     background:
-        rgba(216,162,74,0.10);
+        rgba(216, 162, 74, 0.10);
 
     color:
         #F2C86F;
@@ -343,6 +631,7 @@ a {
     font-weight: 700;
 
     letter-spacing: 1.4px;
+
 }
 
 
@@ -364,6 +653,7 @@ a {
     font-weight: 700;
 
     color: #FFFFFF;
+
 }
 
 
@@ -373,6 +663,11 @@ a {
 
     color:
         #F1C76C;
+
+    font-style: italic;
+
+    font-weight: bold;
+
 }
 
 
@@ -383,11 +678,12 @@ a {
     margin-top: 24px;
 
     color:
-        rgba(255,255,255,0.88);
+        rgba(255, 255, 255, 0.88);
 
     font-size: 16px;
 
     line-height: 1.7;
+
 }
 
 
@@ -402,6 +698,7 @@ a {
     gap: 12px;
 
     margin-top: 28px;
+
 }
 
 
@@ -414,11 +711,12 @@ a {
     gap: 11px;
 
     color:
-        rgba(255,255,255,0.94);
+        rgba(255, 255, 255, 0.94);
 
     font-size: 14px;
 
     font-weight: 600;
+
 }
 
 
@@ -434,16 +732,17 @@ a {
     border-radius: 50%;
 
     background:
-        rgba(47,107,69,0.8);
+        rgba(47, 107, 69, 0.8);
 
     border:
         1px solid
-        rgba(111,205,148,0.65);
+        rgba(111, 205, 148, 0.65);
 
     color:
         #7DE0A2;
 
     font-size: 11px;
+
 }
 
 
@@ -457,13 +756,14 @@ a {
 
     border-top:
         1px solid
-        rgba(255,255,255,0.20);
+        rgba(255, 255, 255, 0.20);
 
     display: flex;
 
     align-items: center;
 
     gap: 18px;
+
 }
 
 
@@ -475,15 +775,17 @@ a {
     font-size: 17px;
 
     letter-spacing: 2px;
+
 }
 
 
 .visual-bottom span {
 
     color:
-        rgba(255,255,255,0.80);
+        rgba(255, 255, 255, 0.80);
 
     font-size: 13px;
+
 }
 
 
@@ -494,6 +796,7 @@ a {
 .booking-form-side {
 
     min-width: 0;
+
     min-height: 0;
 
     display: flex;
@@ -510,6 +813,7 @@ a {
 
     transition:
         background 0.35s ease;
+
 }
 
 
@@ -547,6 +851,7 @@ a {
         background 0.35s ease,
         border-color 0.35s ease,
         box-shadow 0.35s ease;
+
 }
 
 
@@ -563,6 +868,7 @@ a {
     justify-content: space-between;
 
     gap: 15px;
+
 }
 
 
@@ -583,6 +889,7 @@ a {
 
     transition:
         color 0.25s ease;
+
 }
 
 
@@ -590,6 +897,7 @@ a {
 
     color:
         var(--secondary);
+
 }
 
 
@@ -600,6 +908,7 @@ a {
     align-items: center;
 
     gap: 8px;
+
 }
 
 
@@ -638,6 +947,7 @@ a {
 
     transition:
         var(--transition);
+
 }
 
 
@@ -651,6 +961,7 @@ a {
 
     color:
         var(--dark);
+
 }
 
 
@@ -659,6 +970,7 @@ a {
     width: 38px;
 
     padding: 0;
+
 }
 
 
@@ -669,6 +981,7 @@ a {
 .form-heading {
 
     margin-top: 28px;
+
 }
 
 
@@ -689,6 +1002,7 @@ a {
     font-weight: 700;
 
     letter-spacing: -1px;
+
 }
 
 
@@ -696,6 +1010,7 @@ a {
 
     color:
         var(--primary);
+
 }
 
 
@@ -709,6 +1024,7 @@ a {
     font-size: 13px;
 
     line-height: 1.6;
+
 }
 
 
@@ -719,12 +1035,14 @@ a {
 .booking-form {
 
     margin-top: 22px;
+
 }
 
 
 .form-group {
 
     margin-bottom: 13px;
+
 }
 
 
@@ -740,6 +1058,7 @@ a {
     font-size: 12px;
 
     font-weight: 700;
+
 }
 
 
@@ -767,6 +1086,7 @@ a {
 
     transition:
         var(--transition);
+
 }
 
 
@@ -777,7 +1097,8 @@ a {
 
     box-shadow:
         0 0 0 3px
-        rgba(47,107,69,0.10);
+        rgba(47, 107, 69, 0.10);
+
 }
 
 
@@ -791,6 +1112,7 @@ a {
         var(--primary);
 
     font-size: 13px;
+
 }
 
 
@@ -813,6 +1135,7 @@ a {
     font-size: 12px;
 
     font-weight: 500;
+
 }
 
 
@@ -820,12 +1143,14 @@ a {
 
     color:
         var(--muted);
+
 }
 
 
 .input-box select {
 
     cursor: pointer;
+
 }
 
 
@@ -837,6 +1162,7 @@ a {
         1fr 1fr;
 
     gap: 12px;
+
 }
 
 
@@ -878,10 +1204,11 @@ a {
 
     box-shadow:
         0 8px 20px
-        rgba(47,107,69,0.20);
+        rgba(47, 107, 69, 0.20);
 
     transition:
         var(--transition);
+
 }
 
 
@@ -898,7 +1225,8 @@ a {
 
     box-shadow:
         0 10px 25px
-        rgba(216,162,74,0.22);
+        rgba(216, 162, 74, 0.22);
+
 }
 
 
@@ -917,6 +1245,7 @@ a {
     font-size: 11px;
 
     font-weight: 700;
+
 }
 
 
@@ -924,6 +1253,7 @@ a {
 
     color:
         var(--primary);
+
 }
 
 
@@ -931,6 +1261,7 @@ a {
 
     color:
         #B84A42;
+
 }
 
 
@@ -953,7 +1284,8 @@ a {
     color:
         var(--muted);
 
-    font-size: 10px;
+    font-size: 15px;
+
 }
 
 
@@ -961,6 +1293,7 @@ a {
 
     color:
         var(--primary);
+
 }
 
 
@@ -985,6 +1318,7 @@ body.dark-mode {
     --card: #171F1A;
 
     --input-bg: #111813;
+
 }
 
 
@@ -992,6 +1326,7 @@ body.dark-mode .booking-form-side {
 
     background:
         #101611;
+
 }
 
 
@@ -1005,7 +1340,8 @@ body.dark-mode .booking-card {
 
     box-shadow:
         0 20px 60px
-        rgba(0,0,0,0.40);
+        rgba(0, 0, 0, 0.40);
+
 }
 
 
@@ -1013,6 +1349,7 @@ body.dark-mode .back-link {
 
     color:
         #F2F6F3;
+
 }
 
 
@@ -1020,6 +1357,7 @@ body.dark-mode .back-link:hover {
 
     color:
         #F0C66E;
+
 }
 
 
@@ -1033,12 +1371,21 @@ body.dark-mode .small-control {
 
     color:
         #F2F6F3;
+
 }
 
+
 body.dark-mode .small-control:hover {
-    border-color: var(--secondary);
-    color: var(--secondary);
-    background: #202C24;
+
+    border-color:
+        var(--secondary);
+
+    color:
+        var(--secondary);
+
+    background:
+        #202C24;
+
 }
 
 
@@ -1046,6 +1393,7 @@ body.dark-mode .form-heading h2 {
 
     color:
         #F7F8F5;
+
 }
 
 
@@ -1053,6 +1401,7 @@ body.dark-mode .form-heading h2 span {
 
     color:
         #75B88D;
+
 }
 
 
@@ -1060,6 +1409,7 @@ body.dark-mode .form-group label {
 
     color:
         #F2F6F3;
+
 }
 
 
@@ -1070,6 +1420,7 @@ body.dark-mode .input-box {
 
     border-color:
         #334138;
+
 }
 
 
@@ -1078,6 +1429,7 @@ body.dark-mode .input-box select {
 
     color:
         #F4F7F4;
+
 }
 
 
@@ -1085,6 +1437,7 @@ body.dark-mode .input-box input::placeholder {
 
     color:
         #89968E;
+
 }
 
 
@@ -1092,6 +1445,7 @@ body.dark-mode .secure-note {
 
     color:
         #9FAAA2;
+
 }
 
 
@@ -1102,36 +1456,42 @@ body.dark-mode .secure-note {
 html[dir="rtl"] {
 
     direction: rtl;
+
 }
 
 
 html[dir="rtl"] .booking-page {
 
     direction: rtl;
+
 }
 
 
 html[dir="rtl"] .booking-logo {
 
     flex-direction: row;
+
 }
 
 
 html[dir="rtl"] .visual-content {
 
     text-align: right;
+
 }
 
 
 html[dir="rtl"] .visual-point {
 
     flex-direction: row;
+
 }
 
 
 html[dir="rtl"] .visual-bottom {
 
     flex-direction: row;
+
 }
 
 
@@ -1139,6 +1499,7 @@ html[dir="rtl"] .back-link i {
 
     transform:
         rotate(180deg);
+
 }
 
 
@@ -1146,6 +1507,7 @@ html[dir="rtl"] .booking-submit i {
 
     transform:
         rotate(180deg);
+
 }
 
 
@@ -1153,12 +1515,14 @@ html[dir="rtl"] .form-heading,
 html[dir="rtl"] .booking-form {
 
     text-align: right;
+
 }
 
 
 html[dir="rtl"] .input-box {
 
     flex-direction: row;
+
 }
 
 
@@ -1172,31 +1536,41 @@ html[dir="rtl"] .input-box {
 
         grid-template-columns:
             1fr 0.9fr;
+
     }
+
 
     .visual-content {
 
         padding:
             35px 40px;
+
     }
+
 
     .booking-form-side {
 
         padding:
             25px;
+
     }
+
 
     .booking-card {
 
         padding:
             27px 30px;
+
     }
+
 
     .visual-main h1 {
 
         font-size:
             clamp(52px, 6vw, 72px);
+
     }
+
 }
 
 
@@ -1207,12 +1581,18 @@ html[dir="rtl"] .input-box {
 @media (max-width: 800px) {
 
     html {
+
         overflow: auto;
+
     }
 
+
     body {
+
         overflow: auto;
+
     }
+
 
     .booking-page {
 
@@ -1222,19 +1602,25 @@ html[dir="rtl"] .input-box {
 
         grid-template-columns:
             1fr;
+
     }
+
 
     .booking-visual {
 
         min-height:
             520px;
+
     }
+
 
     .visual-content {
 
         padding:
             35px;
+
     }
+
 
     .booking-form-side {
 
@@ -1243,13 +1629,17 @@ html[dir="rtl"] .input-box {
 
         padding:
             30px 20px;
+
     }
+
 
     .booking-card {
 
         max-height:
             none;
+
     }
+
 }
 
 
@@ -1263,19 +1653,25 @@ html[dir="rtl"] .input-box {
 
         min-height:
             480px;
+
     }
+
 
     .visual-content {
 
         padding:
             25px;
+
     }
+
 
     .booking-logo-text {
 
         font-size:
             30px;
+
     }
+
 
     .booking-logo-image {
 
@@ -1284,7 +1680,9 @@ html[dir="rtl"] .input-box {
 
         height:
             48px;
+
     }
+
 
     .visual-main h1 {
 
@@ -1293,24 +1691,33 @@ html[dir="rtl"] .input-box {
 
         letter-spacing:
             -1px;
+
     }
+
 
     .visual-main > p {
 
         font-size:
             14px;
+
     }
+
 
     .visual-bottom {
 
-        display: none;
+        display:
+            none;
+
     }
+
 
     .booking-form-side {
 
         padding:
             18px 15px;
+
     }
+
 
     .booking-card {
 
@@ -1319,25 +1726,33 @@ html[dir="rtl"] .input-box {
 
         border-radius:
             20px;
+
     }
+
 
     .form-heading h2 {
 
         font-size:
             46px;
+
     }
+
 
     .form-row {
 
         grid-template-columns:
             1fr;
+
     }
+
 
     .form-top {
 
         align-items:
             flex-start;
+
     }
+
 
     .small-control {
 
@@ -1346,13 +1761,17 @@ html[dir="rtl"] .input-box {
 
         padding:
             0 10px;
+
     }
+
 
     .icon-control {
 
         width:
             35px;
+
     }
+
 }
 
 
@@ -1369,53 +1788,71 @@ html[dir="rtl"] .input-box {
 
         padding-bottom:
             25px;
+
     }
+
 
     .booking-card {
 
         padding:
             22px 30px;
+
     }
+
 
     .form-heading {
 
         margin-top:
             18px;
+
     }
+
 
     .form-heading h2 {
 
         font-size:
             47px;
+
     }
+
 
     .booking-form {
 
         margin-top:
             15px;
+
     }
+
 
     .form-group {
 
         margin-bottom:
             9px;
+
     }
+
 
     .input-box {
 
         height:
             40px;
+
     }
+
 
     .booking-submit {
 
         height:
             44px;
+
     }
+
 
     .secure-note {
 
         margin-top:
             5px;
+
     }
+
 }

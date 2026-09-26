@@ -267,7 +267,7 @@ button {
 
     font-family: var(--body-font);
 
-    font-size: 10.5px;
+    font-size: 11px;
 
     line-height: 1.2;
 
@@ -278,6 +278,7 @@ button {
     color: #4D6857;
 
     white-space: nowrap;
+    transform: translateX(5px);
 }
 
 
@@ -683,12 +684,16 @@ button {
    HERO TYPOGRAPHY
 ========================================================= */
 
-.hero2-script {
+/*.hero2-script {
     display: block;
 
-    font-family: "Caveat", cursive;
-
-    font-size: clamp(32px, 3.6vw, 44px);
+    font-family:
+        "Cormorant Garamond",
+        serif;
+        font-size:
+        clamp(58px,
+            7vw,
+            90px);
 
     font-weight: 700;
 
@@ -699,16 +704,20 @@ button {
     letter-spacing: -0.01em;
 
     margin-bottom: 2px;
+    
+   
 }
+    
+
 
 .hero2-title {
     font-family: var(--heading-font);
 
-    font-size: clamp(48px, 5.8vw, 78px);
+    font-size: clamp(48px, 5.8vw, 70px);
 
     font-weight: 700;
 
-    color: #123821;
+    color: var(--secondary);
 
     line-height: 0.94;
 
@@ -722,7 +731,7 @@ button {
 .hero2-subhead {
     font-family: var(--heading-font);
 
-    font-size: clamp(17px, 1.8vw, 21px);
+    font-size: clamp(17px, 1.8vw, 30px);
 
     font-weight: 600;
 
@@ -731,14 +740,14 @@ button {
     line-height: 1.35;
 
     margin-bottom: 22px;
-}
+}*/
 
 
 /* =========================================================
    HERO FEATURES
 ========================================================= */
 
-.hero2-features-strip {
+/*.hero2-features-strip {
     display: inline-flex;
 
     align-items: center;
@@ -776,7 +785,7 @@ button {
 
     color: #143821;
 
-    font-size: 16px;
+    font-size: 18px;
 
     background: rgba(255, 255, 255, 0.45);
 
@@ -815,14 +824,14 @@ button {
     background: rgba(20, 56, 33, 0.28);
 
     margin: 0 18px;
-}
+}*/
 
 
 /* =========================================================
    HERO CTA
 ========================================================= */
 
-.hero2-cta-wrap {
+/*.hero2-cta-wrap {
     display: flex;
 
     align-items: center;
@@ -922,14 +931,14 @@ button {
     color: var(--primary);
 
     font-size: 14px;
-}
+}*/
 
 
 /* =========================================================
    HERO BOTTOM
 ========================================================= */
 
-.hero-bottom {
+/*.hero-bottom {
     position: relative;
 
     z-index: 3;
@@ -1052,14 +1061,14 @@ button {
     50% {
         transform: translateY(4px);
     }
-}
+}*/
 
 
 /* =========================================================
    SHORT VIEWPORT HEIGHTS (Laptops / Compact Screens)
 ========================================================= */
 
-@media (max-height: 750px) and (min-width: 769px) {
+/*@media (max-height: 750px) and (min-width: 769px) {
 
     .premium-hero {
         padding-top: calc(76px + 8px);
@@ -1109,6 +1118,592 @@ button {
     .hero-stat strong {
         font-size: 18px;
     }
+}*/
+/* =========================================================
+   HERO 2 - PREMIUM / CINEMATIC
+========================================================= */
+
+.hero2-script {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    /* Screenshot size */
+    font-size: clamp(76px, 6.6vw, 130px);
+
+    font-weight: 700;
+
+    color: #164627;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.025em;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   MAIN HERO HEADING
+========================================================= */
+
+/*.hero2-title {
+    font-family: "italic";
+
+    /* Screenshot lo large heading */
+    /*font-size: clamp(64px, 5.6vw, 70px);
+
+    font-weight: 700;
+
+    color: var(--secondary);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}*/
+.hero2-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(64px, 5.6vw, 80px);
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    color: var(--secondary);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.025em;
+
+    text-transform: none;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   HERO SUB HEADING
+========================================================= */
+
+.hero2-subhead {
+    font-family: var(--heading-font);
+
+    font-size: clamp(19px, 1.55vw, 26px);
+
+    font-weight: 600;
+
+    color: #24412C;
+
+    line-height: 1.4;
+
+    max-width: 650px;
+
+    margin-bottom: 26px;
+}
+
+
+/* =========================================================
+   HERO FEATURES
+========================================================= */
+
+.hero2-features-strip {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0;
+
+    margin-bottom: 26px;
+
+    padding: 2px 0;
+}
+
+
+.hero2-feature-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 9px;
+}
+
+
+.feature-circle-icon {
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 2px solid #143821;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #143821;
+
+    font-size: 19px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.hero2-feature-item:hover .feature-circle-icon {
+    transform: scale(1.08);
+
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+.hero2-feature-item span {
+    font-family: var(--body-font);
+
+    font-size: 11.5px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color: #143821;
+
+    line-height: 1.25;
+
+    text-transform: uppercase;
+}
+
+
+.feature-divider {
+    width: 1px;
+
+    height: 42px;
+
+    background: rgba(20, 56, 33, 0.28);
+
+    margin: 0 20px;
+}
+
+
+/* =========================================================
+   HERO CTA
+========================================================= */
+
+.hero2-cta-wrap {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.hero2-dayout-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #123822;
+
+    color: #FFFFFF !important;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    padding: 14px 30px;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 10px 24px rgba(18, 56, 34, 0.28);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.hero2-dayout-btn:hover {
+    background: #0B2416;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(18, 56, 34, 0.4);
+}
+
+
+.hero2-btn-text,
+.hero2-btn-arrow {
+    color: #FFFFFF !important;
+}
+
+
+.hero2-btn-arrow {
+    font-size: 14px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.hero2-dayout-btn:hover .hero2-btn-arrow {
+    transform: translateX(4px);
+}
+
+
+.leaf-flourish {
+    color: #6CA57F;
+
+    flex-shrink: 0;
+
+    transition: transform 0.3s ease;
+}
+
+
+.leaf-right {
+    transform: scaleX(-1);
+}
+
+
+.hero2-dayout-btn:hover .leaf-left {
+    transform: rotate(-10deg);
+}
+
+
+.hero2-dayout-btn:hover .leaf-right {
+    transform: scaleX(-1) rotate(-10deg);
+}
+
+
+.hero2-cta-note {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 14px;
+
+    color: #143821;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+.hero2-cta-note i {
+    color: var(--primary);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.hero-bottom {
+    position: relative;
+
+    z-index: 3;
+
+    width: fit-content;
+
+    max-width: calc(100% - 48px);
+
+    margin: 0 auto;
+
+    flex-shrink: 0;
+
+    padding: 9px 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(20, 56, 33, 0.20);
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 8px 24px rgba(18, 56, 34, 0.10);
+}
+
+
+.hero-stat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.hero-stat strong {
+    font-family: var(--heading-font);
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    color: #0C2B19;
+
+    line-height: 1;
+}
+
+
+.hero-stat span {
+    color: #183E24;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+.hero-stat-sep {
+    width: 1px;
+
+    height: 20px;
+
+    background: rgba(20, 56, 33, 0.20);
+}
+
+
+.hero-scroll {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #0C2B19;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.hero-scroll:hover {
+    color: var(--primary);
+
+    transform: translateY(1px);
+}
+
+
+.hero-scroll i {
+    color: #C69032;
+
+    animation:
+        heroBounce 1.8s infinite ease-in-out;
+}
+
+
+@keyframes heroBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   DO NOT SHRINK THE HEADINGS TOO MUCH ON SHORT LAPTOPS
+========================================================= */
+
+@media (max-height: 750px) and (min-width: 769px) {
+
+    .premium-hero {
+        padding-top: 82px;
+        padding-bottom: 14px;
+    }
+
+
+    /* Previously 30px - THAT was making it too small */
+    .hero2-script {
+         font-size: clamp(60px, 6vw, 100px);
+
+        margin-bottom: 2px;
+    }
+
+
+    .hero2-title {
+        font-size: clamp(52px, 5vw, 72px);
+
+        margin-bottom: 12px;
+        
+    }
+
+
+    .hero2-subhead {
+        font-size: 25px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .hero2-features-strip {
+        margin-bottom: 18px;
+    }
+
+
+    .feature-circle-icon {
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+
+    .feature-divider {
+        height: 34px;
+
+        margin: 0 15px;
+    }
+
+
+    .hero2-dayout-btn {
+        padding: 12px 24px;
+
+        font-size: 16px;
+    }
+
+
+    .hero-bottom {
+        padding: 7px 20px;
+
+        gap: 16px;
+    }
+
+
+    .hero-stat strong {
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero2-script {
+        font-size: clamp(58px, 7vw, 76px);
+    }
+
+    .hero2-title {
+        font-size: clamp(52px, 6vw, 70px);
+    }
+
+    .hero2-subhead {
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero2-script {
+        font-size: clamp(48px, 12vw, 64px);
+    }
+
+    .hero2-title {
+        font-size: clamp(42px, 11vw, 60px);
+    }
+
+    .hero2-subhead {
+        font-size: 15px;
+
+        line-height: 1.45;
+    }
+
+    .hero2-features-strip {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero2-script {
+        font-size: 50px;
+    }
+
+    .hero2-title {
+        font-size: 42px;
+    }
+
+    .hero2-subhead {
+        font-size: 16px;
+    }
+
+    .feature-circle-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero2-dayout-btn {
+        padding: 12px 22px;
+        font-size: 15px;
+    }
 }
 
 
@@ -1133,7 +1728,7 @@ button {
 .intro-large-image {
     position: relative;
 
-    min-height: 570px;
+    min-height: 250px;
 
     overflow: hidden;
 }
@@ -1213,7 +1808,7 @@ button {
 
     color: var(--dark);
 
-    font-size: clamp(46px, 5vw, 66px);
+    font-size: clamp(46px, 5vw, 60px);
 
     line-height: 0.98;
 
@@ -1237,6 +1832,9 @@ button {
     margin-top: 25px;
 
     font-size: 16px;
+}
+.intro-copy .section-kicker{
+    font-size: 20px;
 }
 
 .text-btn {
@@ -1294,7 +1892,7 @@ button {
 .animal-feature {
     position: relative;
 
-    height: 480px;
+    height: 530px;
 
     overflow: hidden;
 
@@ -1302,7 +1900,7 @@ button {
 }
 
 .animal-feature.large {
-    height: 570px;
+    height: 530px;
 }
 
 .animal-feature img {
@@ -1361,6 +1959,10 @@ button {
     margin-top: 7px;
 
     color: rgba(255, 255, 255, 0.82);
+}
+.section-top .section-kicker{
+    font-size: 20px;
+     
 }
 
 
@@ -1485,6 +2087,9 @@ button {
     font-size: 16px;
 
     font-weight: 700;
+}
+.experience-heading .section-kicker{
+    font-size: 20px;
 }
 
 
@@ -1625,6 +2230,7 @@ button {
     gap: 13px;
 
     margin: 28px 0;
+    font-size: 20px;
 }
 
 .group-points div {
@@ -1643,6 +2249,7 @@ button {
     width: 35px;
 
     color: var(--primary);
+
 }
 
 .groups-image {
@@ -1701,6 +2308,9 @@ button {
     color: var(--muted);
 
     font-size: 11px;
+}
+.groups-copy .section-kicker{
+    font-size: 20px;
 }
 
 
@@ -1821,11 +2431,14 @@ button {
 
     background: transparent;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--primary);
 }
 
 .cta-secondary:hover {
     background: var(--white);
+}
+.cta-copy .section-kicker{
+    font-size: 20px;
 }
 
 
@@ -1944,11 +2557,12 @@ button {
 
     font-family: var(--body-font);
 
-    font-size: 10.5px;
+    font-size: 11px;
 
     font-weight: 600;
 
-    color: #B5D2BF !important;
+    color: var(--primary) !important;
+    transform: translateX(5px);
 }
 
 .footer-brand>p {
@@ -3306,5 +3920,331 @@ html[dir="rtl"] .hero-stat {
         transform: none;
 
         transition: none;
+    }
+}
+/* =========================================================
+   FOOTER LOGO COLOR FIX
+========================================================= */
+
+/* =========================================================
+   HEADER LOGO — KEEP PRIMARY GREEN IN DARK MODE
+========================================================= */
+
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Logo caption */
+body.dark-mode .logo-caption {
+    color: var(--muted) !important;
+}
+
+/* Footer logo main text = Primary Green */
+.footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+/* Footer logo accent text = Secondary Gold */
+.footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Dark mode lo kuda same logo colors */
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO TEXT
+   BOLD & BIG
+========================================================= */
+
+/* HEADER LOGO */
+.logo-text,
+.logo-text .logo-main,
+.logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* FOOTER LOGO */
+.footer-logo-text,
+.footer-logo-text .logo-main,
+.footer-logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* DARK MODE — LOGO COLORS SAME GA UNDALI */
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main,
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent,
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO CAPTION — SAME DARK MODE COLOR
+========================================================= */
+
+/* Light mode */
+.logo-caption,
+.footer-logo-caption {
+    color: #4D6857 !important;
+}
+
+/* Dark mode — same color as header caption */
+body.dark-mode .logo-caption,
+body.dark-mode .footer-logo-caption {
+    color: #A5AEA7 !important;
+}
+/* =========================================================
+   HOME 3 - ALL IMAGES CONTINUOUS MOVEMENT
+========================================================= */
+
+/* All image containers */
+.intro-large-image,
+.animal-feature,
+.experience-row-image,
+.visit-image-layer,
+.groups-image {
+    overflow: hidden;
+}
+
+/* All main images */
+.intro-large-image img,
+.animal-feature img,
+.experience-row-image img,
+.visit-image-layer img,
+.groups-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+    animation: allImagesMove 10s ease-in-out infinite alternate;
+}
+
+/* Different speed for each image */
+.animal-feature:nth-child(2) img {
+    animation-duration: 11s;
+    animation-delay: -2s;
+}
+
+.animal-feature:nth-child(3) img {
+    animation-duration: 13s;
+    animation-delay: -4s;
+}
+
+.animal-feature:nth-child(4) img {
+    animation-duration: 12s;
+    animation-delay: -6s;
+}
+
+.experience-row:nth-child(2) img {
+    animation-duration: 12s;
+    animation-delay: -3s;
+}
+
+.experience-row:nth-child(3) img {
+    animation-duration: 14s;
+    animation-delay: -5s;
+}
+
+.experience-row:nth-child(4) img {
+    animation-duration: 11s;
+    animation-delay: -2s;
+}
+
+
+/* Main movement */
+@keyframes allImagesMove {
+
+    0% {
+        transform: scale(1.08) translate3d(-8px, -4px, 0);
+    }
+
+    50% {
+        transform: scale(1.13) translate3d(8px, 5px, 0);
+    }
+
+    100% {
+        transform: scale(1.08) translate3d(-5px, -3px, 0);
+    }
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.premium-hero .hero-image {
+    animation: heroImageMove 14s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes heroImageMove {
+
+    0% {
+        transform: scale(1.05) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: scale(1.11) translate3d(-12px, -5px, 0);
+    }
+
+    100% {
+        transform: scale(1.05) translate3d(10px, 5px, 0);
+    }
+}
+
+
+/* =========================================================
+   INTRO IMAGE
+========================================================= */
+
+.intro-large-image img {
+    animation: introImageMove 11s ease-in-out infinite alternate;
+}
+
+@keyframes introImageMove {
+
+    0% {
+        transform: scale(1.08) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: scale(1.13) translate3d(-10px, -6px, 0);
+    }
+
+    100% {
+        transform: scale(1.08) translate3d(8px, 4px, 0);
+    }
+}
+
+
+/* =========================================================
+   VISIT IMAGE
+========================================================= */
+
+.visit-image-layer img {
+    animation: visitImageMove 15s ease-in-out infinite alternate;
+}
+
+@keyframes visitImageMove {
+
+    0% {
+        transform: scale(1.08) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: scale(1.14) translate3d(-12px, -5px, 0);
+    }
+
+    100% {
+        transform: scale(1.08) translate3d(10px, 5px, 0);
+    }
+}
+
+
+/* =========================================================
+   GROUP IMAGE
+========================================================= */
+
+.groups-image > img {
+    animation: groupsImageMove 13s ease-in-out infinite alternate;
+}
+
+@keyframes groupsImageMove {
+
+    0% {
+        transform: scale(1.08) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: scale(1.13) translate3d(9px, -5px, 0);
+    }
+
+    100% {
+        transform: scale(1.08) translate3d(-8px, 5px, 0);
+    }
+}
+
+
+/* =========================================================
+   EXPERIENCE IMAGES
+========================================================= */
+
+.experience-row-image img {
+    animation: experienceImageMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes experienceImageMove {
+
+    0% {
+        transform: scale(1.08) translate3d(-7px, 0, 0);
+    }
+
+    50% {
+        transform: scale(1.13) translate3d(7px, -5px, 0);
+    }
+
+    100% {
+        transform: scale(1.08) translate3d(-5px, 4px, 0);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .premium-hero .hero-image {
+        animation-duration: 17s;
+    }
+
+    .intro-large-image img,
+    .animal-feature img,
+    .experience-row-image img,
+    .visit-image-layer img,
+    .groups-image > img {
+        animation-duration: 14s;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .premium-hero .hero-image,
+    .intro-large-image img,
+    .animal-feature img,
+    .experience-row-image img,
+    .visit-image-layer img,
+    .groups-image > img {
+        animation: none !important;
     }
 }

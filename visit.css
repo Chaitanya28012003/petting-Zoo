@@ -320,7 +320,7 @@ body.dark-mode .nav-link.active {
         "DM Sans",
         sans-serif;
 
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.2;
 
     font-weight: 600;
@@ -328,6 +328,7 @@ body.dark-mode .nav-link.active {
     color: #4D6857;
 
     white-space: nowrap;
+    transform: translateX(5px);
 }
 
 
@@ -847,6 +848,8 @@ body.dark-mode .mobile-menu-btn {
     display: block;
 
     color: var(--secondary);
+     font-style: italic;
+      font-weight:bold;
 }
 
 
@@ -1022,7 +1025,7 @@ body.dark-mode .mobile-menu-btn {
 
     color: var(--secondary);
 
-    font-size: 16px;
+    font-size: 20px;
 
     font-weight: 700;
 
@@ -1054,7 +1057,7 @@ body.dark-mode .mobile-menu-btn {
     color: var(--dark);
 
     font-size:
-        clamp(42px, 5vw, 68px);
+        clamp(42px, 5vw, 50px);
 
     line-height: 0.98;
 
@@ -1993,17 +1996,18 @@ body.dark-mode .mobile-menu-btn {
         "DM Sans",
         sans-serif;
 
-    font-size: 10.5px;
+    font-size: 11px;
 
     line-height: 1.2;
 
     font-weight: 600;
 
-    color: #B5D2BF !important;
+    color: var(--primary) !important;
 
     letter-spacing: 0.01em;
 
     white-space: nowrap;
+    transform: translateX(5px);
 }
 
 .footer-brand>p {
@@ -2021,7 +2025,7 @@ body.dark-mode .mobile-menu-btn {
    SOCIAL LINKS
 ========================================================= */
 
-.social-links {
+/*.social-links {
     display: flex;
 
     gap: 9px;
@@ -2058,6 +2062,61 @@ body.dark-mode .mobile-menu-btn {
 
     transform:
         translateY(-3px);
+}*/
+.social-links {
+
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 22px;
+}
+
+.social-links a {
+
+    width: 40px;
+    height: 40px;
+
+    border:
+        1px solid var(--primary-dark);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--primary);
+
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--primary);
+
+    color: white;
+}
+body.dark-mode .social-links a {
+
+    border-color:
+        #2B3830;
+
+    color:
+        #D8A24A;
+}
+
+body.dark-mode .social-links a:hover {
+
+    background:
+        var(--primary);
+
+    color:
+        #FFFFFF;
+        border-color:
+        var(--primary);
 }
 
 
@@ -2656,5 +2715,285 @@ html[dir="rtl"] .location-btn i {
 
         transition-duration:
             0.01ms !important;
+    }
+}
+/* =========================================================
+   FOOTER LOGO COLOR FIX
+========================================================= */
+
+/* =========================================================
+   HEADER LOGO — KEEP PRIMARY GREEN IN DARK MODE
+========================================================= */
+
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Logo caption */
+body.dark-mode .logo-caption {
+    color: var(--muted) !important;
+}
+
+/* Footer logo main text = Primary Green */
+.footer-logo-text .logo-main {
+    color: var(--primary-dark) !important;
+}
+
+/* Footer logo accent text = Secondary Gold */
+.footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Dark mode lo kuda same logo colors */
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO TEXT
+   BOLD & BIG
+========================================================= */
+
+/* HEADER LOGO */
+.logo-text,
+.logo-text .logo-main,
+.logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* FOOTER LOGO */
+.footer-logo-text,
+.footer-logo-text .logo-main,
+.footer-logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* DARK MODE — LOGO COLORS SAME GA UNDALI */
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main,
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent,
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO CAPTION — SAME DARK MODE COLOR
+========================================================= */
+
+/* Light mode */
+.logo-caption,
+.footer-logo-caption {
+    color: #4D6857 !important;
+}
+
+/* Dark mode — same color as header caption */
+body.dark-mode .logo-caption,
+body.dark-mode .footer-logo-caption {
+    color: #A5AEA7 !important;
+}
+/* =========================================================
+   PREMIUM MOVING BOX / CARD EFFECT
+   ADD AT THE VERY END OF CSS
+========================================================= */
+
+/* All main boxes */
+.group-card,
+.included-card,
+.package-card,
+.booking-form,
+.cta-box {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+}
+
+
+/* ---------------------------------------------------------
+   GROUP CARDS
+--------------------------------------------------------- */
+
+.group-card:hover {
+    transform: translateY(-12px);
+    box-shadow:
+        0 22px 50px rgba(23, 35, 27, 0.16);
+}
+
+
+/* ---------------------------------------------------------
+   INCLUDED CARDS
+--------------------------------------------------------- */
+
+.included-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 20px 45px rgba(23, 35, 27, 0.14);
+}
+
+
+/* ---------------------------------------------------------
+   PACKAGE CARDS
+--------------------------------------------------------- */
+
+.package-card:hover {
+    transform: translateY(-12px);
+    box-shadow:
+        0 22px 50px rgba(23, 35, 27, 0.16);
+}
+
+
+/* ---------------------------------------------------------
+   BOOKING FORM
+--------------------------------------------------------- */
+
+.booking-form:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 20px 45px rgba(23, 35, 27, 0.14);
+}
+
+
+/* ---------------------------------------------------------
+   CTA BOX
+--------------------------------------------------------- */
+
+.cta-box:hover {
+    transform: translateY(-7px);
+    box-shadow:
+        0 22px 50px rgba(23, 35, 27, 0.15);
+}
+
+
+/* =========================================================
+   DARK MODE SHADOW
+========================================================= */
+
+body.dark-mode .group-card:hover,
+body.dark-mode .included-card:hover,
+body.dark-mode .package-card:hover,
+body.dark-mode .booking-form:hover,
+body.dark-mode .cta-box:hover {
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.42);
+}
+
+
+/* =========================================================
+   IMAGE ZOOM INSIDE MOVING BOXES
+========================================================= */
+
+.group-card-image img,
+.intro-image img,
+.birthday-image img,
+.planning-image img {
+    transition:
+        transform 0.7s ease;
+}
+
+.group-card:hover .group-card-image img,
+.intro-image:hover img,
+.birthday-image:hover img,
+.planning-image:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =========================================================
+   ICON LITTLE MOVE
+========================================================= */
+
+.group-card:hover .card-icon,
+.included-card:hover .included-icon,
+.package-card:hover .package-icon {
+    transform: translateY(-3px) scale(1.05);
+}
+
+.card-icon,
+.included-icon,
+.package-icon {
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* =========================================================
+   GOLD BORDER HIGHLIGHT ON HOVER
+========================================================= */
+
+.group-card:hover,
+.included-card:hover,
+.package-card:hover {
+    border-color: var(--secondary);
+}
+
+
+/* =========================================================
+   MOBILE - DISABLE LARGE MOVEMENT
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .group-card:hover,
+    .included-card:hover,
+    .package-card:hover,
+    .booking-form:hover,
+    .cta-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .group-card:hover .group-card-image img,
+    .intro-image:hover img,
+    .birthday-image:hover img,
+    .planning-image:hover img {
+        transform: scale(1.03);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .group-card,
+    .included-card,
+    .package-card,
+    .booking-form,
+    .cta-box,
+    .group-card-image img,
+    .intro-image img,
+    .birthday-image img,
+    .planning-image img {
+        transition: none !important;
+    }
+
+    .group-card:hover,
+    .included-card:hover,
+    .package-card:hover,
+    .booking-form:hover,
+    .cta-box:hover {
+        transform: none !important;
     }
 }

@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,13 +12,24 @@
 
     <title>Book Your Visit | pawNest</title>
 
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet"
     >
+
 
     <!-- Font Awesome -->
     <link
@@ -25,174 +37,363 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-    <link rel="stylesheet" href="book.css">
 
-    <!-- Instant Theme and RTL Initialization -->
-    <style id="themeAntiFlash">html.dark-mode { background-color: #111814; color-scheme: dark; } html.dark-mode .header { background: rgba(24,33,27,0.96) !important; border-bottom-color: #2B3830 !important; }</style>
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="book.css"
+    >
+
+
+    <!-- Dark Mode Anti Flash -->
+    <style>
+
+        html.dark-mode {
+            background-color: #111814;
+            color-scheme: dark;
+        }
+
+        html.dark-mode .booking-form-side {
+            background: #101611 !important;
+        }
+
+    </style>
+
+
+    <!-- Theme / RTL -->
     <script>
-        (function() {
-            var theme = localStorage.getItem("farmTheme") || localStorage.getItem("zoopark-theme") || localStorage.getItem("pawnest-theme");
+
+        (function () {
+
+            var theme =
+                localStorage.getItem("farmTheme") ||
+                localStorage.getItem("zoopark-theme") ||
+                localStorage.getItem("pawnest-theme");
+
             if (theme === "dark") {
+
                 document.documentElement.classList.add("dark-mode");
+
                 if (document.body) {
+
                     document.body.classList.add("dark-mode");
+
                 } else {
-                    document.addEventListener("DOMContentLoaded", function() {
-                        document.body.classList.add("dark-mode");
-                    });
+
+                    document.addEventListener(
+                        "DOMContentLoaded",
+                        function () {
+
+                            document.body.classList.add("dark-mode");
+
+                        }
+                    );
+
                 }
+
             }
-            var dir = localStorage.getItem("farmDirection") || localStorage.getItem("zoopark-direction");
+
+
+            var dir =
+                localStorage.getItem("farmDirection") ||
+                localStorage.getItem("zoopark-direction");
+
             if (dir === "rtl") {
-                document.documentElement.setAttribute("dir", "rtl");
+
+                document.documentElement.setAttribute(
+                    "dir",
+                    "rtl"
+                );
+
             }
+
         })();
+
     </script>
+
 </head>
 
 
 <body>
 
-    <main class="booking-page">
 
-        <!-- =========================================
-             LEFT SIDE
-        ========================================== -->
+<main class="booking-page">
 
-        <section class="booking-visual">
 
-            <div class="visual-bg"></div>
+    <!-- =====================================================
+         LEFT SIDE
+    ====================================================== -->
 
-            <div class="visual-overlay"></div>
+    <section class="booking-visual">
 
-            <div class="visual-content">
 
-                <a href="index.html" class="booking-logo">
-                    <span class="booking-logo-image">
-                        <img src="photos/logo4.jpeg" alt="pawNest Petting Zoo & Animal Farm">
+        <!-- Background Image -->
+        <div class="visual-bg"></div>
+
+
+        <!-- Overlay -->
+        <div class="visual-overlay"></div>
+
+
+        <div class="visual-content">
+
+
+            <!-- =================================================
+                 PAWNEST LOGO
+            ================================================== -->
+ <a href="index.html" class="logo">
+            <span class="logo-image">
+                <img src="photos/logo4.jpeg" alt="pawNest Petting Zoo & Farm">
+            </span>
+            <span class="logo-brand">
+                <span class="logo-text">
+    <span class="logo-main">Paw</span><span class="logo-accent">Nest</span>
+</span>
+                <small class="logo-caption">P E T T I N G F A R M 🐾</small>
+            </span>
+        </a>
+           
+
+                  
+
+
+            <!-- =================================================
+                 MAIN CONTENT
+            ================================================== -->
+
+            <div class="visual-main">
+
+
+                <span class="visual-badge">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    FAMILY FARM EXPERIENCE
+
+                </span>
+
+
+                <h1>
+
+                    Plan Your
+
+                    <span>
+                        pawNest Visit.
                     </span>
-                    <span class="booking-logo-brand">
-                        <span class="booking-logo-text">
-                            <span class="logo-main">paw</span><span class="logo-accent">Nest</span>
+
+                </h1>
+
+
+                <p>
+
+                    Come meet our friendly animals,
+                    enjoy peaceful farm moments,
+                    and create happy memories
+                    with the whole family.
+
+                </p>
+
+
+                <!-- Points -->
+
+                <div class="visual-points">
+
+
+                    <div class="visual-point">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
                         </span>
-                        <small class="logo-caption">A Home for Every Paw 🐾</small>
-                    </span>
-                </a>
 
-                <!-- Main Content -->
-
-                <div class="visual-main">
-
-                    <span class="visual-badge">
-                        <i class="fa-solid fa-paw"></i>
-                        FAMILY FARM EXPERIENCE
-                    </span>
-
-
-                    <h1>
-                        Plan Your
-                        <span>pawNest Visit.</span>
-                    </h1>
-
-
-                    <p>
-                        Come meet our friendly animals, enjoy peaceful
-                        farm moments, and create happy memories with
-                        the whole family.
-                    </p>
-
-
-                    <div class="visual-points">
-
-                        <div class="visual-point">
-                            <span>
-                                <i class="fa-solid fa-check"></i>
-                            </span>
-                            Friendly farm animals
-                        </div>
-
-                        <div class="visual-point">
-                            <span>
-                                <i class="fa-solid fa-check"></i>
-                            </span>
-                            Fun family experiences
-                        </div>
-
-                        <div class="visual-point">
-                            <span>
-                                <i class="fa-solid fa-check"></i>
-                            </span>
-                            Safe & family friendly
-                        </div>
+                        Friendly farm animals
 
                     </div>
+
+
+                    <div class="visual-point">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        Fun family experiences
+
+                    </div>
+
+
+                    <div class="visual-point">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        Safe & family friendly
+
+                    </div>
+
 
                 </div>
 
 
-                <!-- Bottom -->
+            </div>
 
-                <div class="visual-bottom">
 
-                    <div class="stars">
-                        ★★★★★
-                    </div>
+            <!-- =================================================
+                 BOTTOM
+            ================================================== -->
 
-                    <span>
-                        A cheerful day with animals, nature & family.
-                    </span>
+            <div class="visual-bottom">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <span>
+                    A cheerful day with animals,
+                    nature & family.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RIGHT SIDE
+    ====================================================== -->
+
+    <section class="booking-form-side">
+
+
+        <div class="booking-card">
+
+
+            <!-- =================================================
+                 TOP CONTROLS
+            ================================================== -->
+
+            <div class="form-top">
+
+
+                <a
+                    href="index.html"
+                    class="back-link"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Site
+
+                </a>
+
+
+                <div class="form-controls">
+
+
+                    <!-- RTL -->
+
+                    <button
+                        type="button"
+                        id="rtlToggle"
+                        class="small-control"
+                    >
+
+                        <i class="fa-solid fa-right-left"></i>
+
+                        <span id="rtlText">
+                            RTL
+                        </span>
+
+                    </button>
+
+
+                    <!-- Dark Mode -->
+
+                    <button
+                        type="button"
+                        id="themeToggle"
+                        class="small-control icon-control"
+                    >
+
+                        <i
+                            id="themeIcon"
+                            class="fa-solid fa-moon"
+                        ></i>
+
+                    </button>
+
 
                 </div>
 
             </div>
 
-        </section>
+
+
+            <!-- =================================================
+                 FORM HEADING
+            ================================================== -->
+
+            <div class="form-heading">
+
+
+                <h2>
+
+                    Book Your
+
+                    <span>
+                        Visit.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Choose your date and tell us
+                    a little about your visit.
+
+                </p>
+
+
+            </div>
 
 
 
-        <!-- =========================================
-             RIGHT SIDE
-        ========================================== -->
+            <!-- =================================================
+                 BOOKING FORM
+            ================================================== -->
 
-        <section class="booking-form-side">
-
-            <div class="booking-card">
-
-                <!-- Top Controls -->
-
-                <div class="form-top">
-
-                    <a
-                        href="index.html"
-                        class="back-link"
-                    >
-                        <i class="fa-solid fa-arrow-left"></i>
-                        Back to Site
-                    </a>
+            <form
+                id="bookingForm"
+                class="booking-form"
+            >
 
 
-                    <div class="form-controls">
+                <!-- Name -->
 
-                        <button
-                            type="button"
-                            id="rtlToggle"
-                            class="small-control"
+                <div class="form-group">
+
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-user"></i>
+
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required
                         >
-                            <i class="fa-solid fa-right-left"></i>
-                            <span id="rtlText">RTL</span>
-                        </button>
-
-
-                        <button
-                            type="button"
-                            id="themeToggle"
-                            class="small-control icon-control"
-                        >
-                            <i
-                                id="themeIcon"
-                                class="fa-solid fa-moon"
-                            ></i>
-                        </button>
 
                     </div>
 
@@ -200,47 +401,55 @@
 
 
 
-                <!-- Heading -->
+                <!-- Email -->
 
-                <div class="form-heading">
+                <div class="form-group">
 
-                    <h2>
-                        Book Your
-                        <span>Visit.</span>
-                    </h2>
 
-                    <p>
-                        Choose your date and tell us a little
-                        about your visit.
-                    </p>
+                    <label for="email">
+                        Email Address
+                    </label>
+
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
 
                 </div>
 
 
 
-                <!-- Booking Form -->
+                <!-- Date + Guests -->
 
-                <form
-                    id="bookingForm"
-                    class="booking-form"
-                >
+                <div class="form-row">
 
-                    <!-- Name -->
 
                     <div class="form-group">
 
-                        <label for="name">
-                            Your Name
+
+                        <label for="date">
+                            Visit Date
                         </label>
+
 
                         <div class="input-box">
 
-                            <i class="fa-regular fa-user"></i>
+                            <i class="fa-regular fa-calendar"></i>
+
 
                             <input
-                                type="text"
-                                id="name"
-                                placeholder="Enter your name"
+                                type="date"
+                                id="date"
                                 required
                             >
 
@@ -250,155 +459,58 @@
 
 
 
-                    <!-- Email -->
-
                     <div class="form-group">
 
-                        <label for="email">
-                            Email Address
+
+                        <label for="guests">
+                            Guests
                         </label>
+
 
                         <div class="input-box">
 
-                            <i class="fa-regular fa-envelope"></i>
+                            <i class="fa-solid fa-users"></i>
 
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="you@example.com"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Date + Guests -->
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="date">
-                                Visit Date
-                            </label>
-
-                            <div class="input-box">
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                <input
-                                    type="date"
-                                    id="date"
-                                    required
-                                >
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="guests">
-                                Guests
-                            </label>
-
-                            <div class="input-box">
-
-                                <i class="fa-solid fa-users"></i>
-
-                                <select
-                                    id="guests"
-                                    required
-                                >
-                                    <option value="">
-                                        Guests
-                                    </option>
-
-                                    <option value="1">
-                                        1 Guest
-                                    </option>
-
-                                    <option value="2">
-                                        2 Guests
-                                    </option>
-
-                                    <option value="3">
-                                        3 Guests
-                                    </option>
-
-                                    <option value="4">
-                                        4 Guests
-                                    </option>
-
-                                    <option value="5">
-                                        5 Guests
-                                    </option>
-
-                                    <option value="6">
-                                        6 Guests
-                                    </option>
-
-                                    <option value="7">
-                                        7 Guests
-                                    </option>
-
-                                    <option value="8+">
-                                        8+ Guests
-                                    </option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Experience -->
-
-                    <div class="form-group">
-
-                        <label for="experience">
-                            Experience
-                        </label>
-
-                        <div class="input-box">
-
-                            <i class="fa-solid fa-paw"></i>
 
                             <select
-                                id="experience"
+                                id="guests"
                                 required
                             >
 
                                 <option value="">
-                                    Select an experience
+                                    Guests
                                 </option>
 
-                                <option value="general">
-                                    General Farm Visit
+                                <option value="1">
+                                    1 Guest
                                 </option>
 
-                                <option value="feeding">
-                                    Animal Feeding
+                                <option value="2">
+                                    2 Guests
                                 </option>
 
-                                <option value="petting">
-                                    Petting Experience
+                                <option value="3">
+                                    3 Guests
                                 </option>
 
-                                <option value="birthday">
-                                    Birthday Group
+                                <option value="4">
+                                    4 Guests
                                 </option>
 
-                                <option value="school">
-                                    School Visit
+                                <option value="5">
+                                    5 Guests
+                                </option>
+
+                                <option value="6">
+                                    6 Guests
+                                </option>
+
+                                <option value="7">
+                                    7 Guests
+                                </option>
+
+                                <option value="8+">
+                                    8+ Guests
                                 </option>
 
                             </select>
@@ -408,46 +520,112 @@
                     </div>
 
 
-
-                    <!-- Submit -->
-
-                    <button
-                        type="submit"
-                        class="booking-submit"
-                    >
-
-                        <span>
-                            Confirm My Visit
-                        </span>
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </button>
+                </div>
 
 
-                    <!-- Message -->
 
-                    <div
-                        id="bookingMessage"
-                        class="booking-message"
-                    ></div>
+                <!-- Experience -->
+
+                <div class="form-group">
 
 
-                    <p class="secure-note">
-                        <i class="fa-solid fa-shield-heart"></i>
-                        Your booking details are safe with us.
-                    </p>
-
-                </form>
-
-            </div>
-
-        </section>
-
-    </main>
+                    <label for="experience">
+                        Experience
+                    </label>
 
 
-    <script src="book.js"></script>
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-paw"></i>
+
+
+                        <select
+                            id="experience"
+                            required
+                        >
+
+                            <option value="">
+                                Select an experience
+                            </option>
+
+                            <option value="general">
+                                General Farm Visit
+                            </option>
+
+                            <option value="feeding">
+                                Animal Feeding
+                            </option>
+
+                            <option value="petting">
+                                Petting Experience
+                            </option>
+
+                            <option value="birthday">
+                                Birthday Group
+                            </option>
+
+                            <option value="school">
+                                School Visit
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="booking-submit"
+                >
+
+                    <span>
+                        Confirm My Visit
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <!-- Message -->
+
+                <div
+                    id="bookingMessage"
+                    class="booking-message"
+                ></div>
+
+
+
+                <!-- Secure Note -->
+
+                <p class="secure-note">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    Your booking details are safe with us.
+
+                </p>
+
+
+            </form>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="book.js"></script>
 
 </body>
 

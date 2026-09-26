@@ -327,7 +327,7 @@ body.dark-mode .nav-link.active {
         "DM Sans",
         sans-serif;
 
-    font-size: 10px;
+    font-size: 11px;
 
     line-height: 1.2;
 
@@ -336,6 +336,7 @@ body.dark-mode .nav-link.active {
     color: #4D6857;
 
     white-space: nowrap;
+    transform: translateX(5px);
 }
 
 
@@ -826,7 +827,7 @@ body.dark-mode .logo-image {
 
     color: white;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
 
     margin-bottom: 25px;
@@ -859,6 +860,7 @@ body.dark-mode .logo-image {
     display: block;
 
     color: var(--secondary);
+     font-style: italic;
 }
 
 .hero-content > p {
@@ -1030,7 +1032,7 @@ body.dark-mode .logo-image {
 .intro-content h2,
 .featured-content h2 {
     font-size:
-        clamp(42px, 5vw, 68px);
+        clamp(42px, 5vw, 50px);
 
     line-height: 0.98;
 
@@ -1935,17 +1937,18 @@ body.dark-mode .experience-cta .btn-secondary:hover {
         "DM Sans",
         sans-serif;
 
-    font-size: 10.5px;
+    font-size: 11px;
 
     line-height: 1.2;
 
     font-weight: 600;
 
-    color: #B5D2BF !important;
+    color: var(--primary) !important;
 
     letter-spacing: 0.01em;
 
     white-space: nowrap;
+    transform: translateX(5px);
 }
 
 
@@ -2720,4 +2723,99 @@ body.dark-mode .experience-tag {
         transition-duration:
             0.01ms !important;
     }
+}
+/* =========================================================
+   FOOTER LOGO COLOR FIX
+========================================================= */
+
+/* =========================================================
+   HEADER LOGO — KEEP PRIMARY GREEN IN DARK MODE
+========================================================= */
+
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Logo caption */
+body.dark-mode .logo-caption {
+    color: var(--muted) !important;
+}
+
+/* Footer logo main text = Primary Green */
+.footer-logo-text .logo-main {
+    color: var(--primary-dark) !important;
+}
+
+/* Footer logo accent text = Secondary Gold */
+.footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Dark mode lo kuda same logo colors */
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO TEXT
+   BOLD & BIG
+========================================================= */
+
+/* HEADER LOGO */
+.logo-text,
+.logo-text .logo-main,
+.logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* FOOTER LOGO */
+.footer-logo-text,
+.footer-logo-text .logo-main,
+.footer-logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* DARK MODE — LOGO COLORS SAME GA UNDALI */
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main,
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent,
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO CAPTION — SAME DARK MODE COLOR
+========================================================= */
+
+/* Light mode */
+.logo-caption,
+.footer-logo-caption {
+    color: #4D6857 !important;
+}
+
+/* Dark mode — same color as header caption */
+body.dark-mode .logo-caption,
+body.dark-mode .footer-logo-caption {
+    color: #A5AEA7 !important;
 }

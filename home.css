@@ -239,9 +239,10 @@ a {
     min-width: max-content;
 }
 
-.logo-text {
+/*.logo-text {
     display: inline-flex;
     align-items: baseline;
+    white-space: nowrap;
     font-family: var(--heading-font), "Cormorant Garamond", serif;
     font-size: 30px;
     font-weight: 700;
@@ -257,19 +258,42 @@ a {
 .logo-accent {
     color: #D8A24A !important;
     transition: color 0.3s ease;
+}*/
+.logo-text {
+    display: inline-flex;
+    align-items: baseline;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    
+}
+.logo-main::first-letter {
+    position: relative;
+    top: -8px;
+}
+
+.logo-main {
+    color: #1A4D2E !important;
+}
+
+.logo-accent {
+    color: #D8A24A !important;
 }
 
 .logo-caption {
     display: block;
-    margin-top: 3.5px;
+    margin-top: 1.5px;
     font-family: "DM Sans", sans-serif;
-    font-size: 10.5px;
+    font-size: 11px;
     line-height: 1.2;
     font-weight: 600;
     letter-spacing: 0.01em;
     color: #4D6857;
     white-space: nowrap;
     transition: color 0.3s ease;
+    transform: translateX(5px);
+    
 }
 
 body.dark-mode .logo-main {
@@ -815,12 +839,47 @@ body.dark-mode .logo-image {
 }
 
 /* Hero Title - Light Mode */
-.hero-title {
-    font-family: var(--heading-font), serif;
-    font-size: clamp(36px, 4.2vw, 56px);
+/*.hero-title {
+     font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            58px,
+            7vw,
+            100px
+        );
     line-height: 1.05;
     font-weight: 700;
     letter-spacing: -0.02em;
+    color: #123821;
+    margin-bottom: 14px;
+    transition: color 0.4s ease;
+}*/
+.hero-title {
+    /*font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 5.5vw, 90px);
+
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.02em;*/
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(58px,
+            7vw,
+            90px);
+
+    line-height:
+        0.90;
+
+    letter-spacing:
+        -2px;
+
     color: #123821;
     margin-bottom: 14px;
     transition: color 0.4s ease;
@@ -829,7 +888,7 @@ body.dark-mode .logo-image {
 .hero-title-accent {
     display: block;
     font-style: italic;
-    font-weight: 600;
+    
     color: #C2821E;
     background: linear-gradient(135deg, #A86E12 0%, #D89228 45%, #B87612 100%);
     -webkit-background-clip: text;
@@ -1079,15 +1138,15 @@ body.dark-mode .logo-image {
 
 .experience-card-media {
     position: relative;
-    width: 100%;
-    height: 215px;
+    width: 200%;
+    height: 315px;
     overflow: hidden;
     background: #112519;
 }
 
 .experience-card-media img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 110%;
     object-fit: cover;
     object-position: center 30%;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
@@ -1530,7 +1589,7 @@ html[dir="rtl"] .hero-card-stage {
         serif;
 
     font-size:
-        clamp(42px, 5vw, 62px);
+        clamp(42px, 5vw, 50px);
 
     line-height:
         1;
@@ -1566,7 +1625,7 @@ html[dir="rtl"] .hero-card-stage {
         var(--muted);
 
     font-size:
-        15px;
+        20px;
 }
 
 
@@ -2357,7 +2416,7 @@ html[dir="rtl"] .hero-card-stage {
         var(--dark);
 
     font-size:
-        12px;
+        15px;
 
     font-weight:
         700;
@@ -3672,12 +3731,13 @@ body.dark-mode .cta-secondary:hover {
     display: block;
     margin-top: 3.5px;
     font-family: "DM Sans", sans-serif;
-    font-size: 10.5px;
+    font-size: 11px;
     line-height: 1.2;
     font-weight: 600;
-    color: #B5D2BF !important;
+    color: var(--primary) !important;
     letter-spacing: 0.01em;
     white-space: nowrap;
+    transform: translateX(5px);
 }
 
 
@@ -4710,4 +4770,99 @@ html[dir="rtl"] .experience-content a:hover i {
         transition-duration:
             0.01ms !important;
     }
+}
+/* =========================================================
+   FOOTER LOGO COLOR FIX
+========================================================= */
+
+/* =========================================================
+   HEADER LOGO — KEEP PRIMARY GREEN IN DARK MODE
+========================================================= */
+
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Logo caption */
+body.dark-mode .logo-caption {
+    color: var(--muted) !important;
+}
+
+/* Footer logo main text = Primary Green */
+.footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+/* Footer logo accent text = Secondary Gold */
+.footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+
+/* Dark mode lo kuda same logo colors */
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO TEXT
+   BOLD & BIG
+========================================================= */
+
+/* HEADER LOGO */
+.logo-text,
+.logo-text .logo-main,
+.logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* FOOTER LOGO */
+.footer-logo-text,
+.footer-logo-text .logo-main,
+.footer-logo-text .logo-accent {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.03em;
+}
+
+/* DARK MODE — LOGO COLORS SAME GA UNDALI */
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .logo-main,
+body.dark-mode .footer-logo-text .logo-main {
+    color: var(--primary) !important;
+}
+
+body.dark-mode .logo-text .logo-accent,
+body.dark-mode .logo-accent,
+body.dark-mode .footer-logo-text .logo-accent {
+    color: var(--secondary) !important;
+}
+/* =========================================================
+   HEADER + FOOTER LOGO CAPTION — SAME DARK MODE COLOR
+========================================================= */
+
+/* Light mode */
+.logo-caption,
+.footer-logo-caption {
+    color: #4D6857 !important;
+}
+
+/* Dark mode — same color as header caption */
+body.dark-mode .logo-caption,
+body.dark-mode .footer-logo-caption {
+    color: #A5AEA7 !important;
 }
