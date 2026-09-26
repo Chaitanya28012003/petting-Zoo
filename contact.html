@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact Us | ZooPark</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- Instant Theme and RTL Initialization -->
+    <style id="themeAntiFlash">html.dark-mode { background-color: #111814; color-scheme: dark; } html.dark-mode .header { background: rgba(24,33,27,0.96) !important; border-bottom-color: #2B3830 !important; }</style>
+    <script>
+        (function() {
+            var theme = localStorage.getItem("farmTheme") || localStorage.getItem("zoopark-theme") || localStorage.getItem("pawnest-theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+                if (document.body) {
+                    document.body.classList.add("dark-mode");
+                } else {
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.body.classList.add("dark-mode");
+                    });
+                }
+            }
+            var dir = localStorage.getItem("farmDirection") || localStorage.getItem("zoopark-direction");
+            if (dir === "rtl") {
+                document.documentElement.setAttribute("dir", "rtl");
+            }
+        })();
+    </script>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header" id="header">
+
+    <div class="header-container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+
+                <span class="logo-image">
+                    <img
+                        src="photos/logo4.jpeg"
+                        alt="pawNest Petting Zoo & Animal Farm">
+                </span>
+
+                <span class="logo-brand">
+
+                    <span class="logo-text">
+                        <span class="logo-main">paw</span><span class="logo-accent">Nest</span>
+                    </span>
+
+                    <small class="logo-caption">
+                        A Home for Every Paw 🐾
+                    </small>
+
+                </span>
+
+            </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="nav" id="mainNav">
+
+            <div class="nav-item dropdown">
+
+                <button class="nav-link dropdown-toggle">
+
+                    Home
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="nav-item">
+
+                <a
+                    href="animals.html"
+                    class="nav-link"
+                >
+                    Our Animals
+                </a>
+
+            </div>
+
+
+            <div class="nav-item">
+
+                <a
+                    href="experience.html"
+                    class="nav-link"
+                >
+                    Experiences
+                </a>
+
+            </div>
+
+
+            <div class="nav-item">
+
+                <a
+                    href="visit.html"
+                    class="nav-link"
+                >
+                    Visit Us
+                </a>
+
+            </div>
+
+
+            <div class="nav-item">
+
+                <a
+                    href="groupbooking.html"
+                    class="nav-link"
+                >
+                    Group Bookings
+                </a>
+
+            </div>
+
+
+            <div class="nav-item">
+
+                <a
+                    href="contact.html"
+                    class="nav-link active"
+                >
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+
+            <button
+                class="header-control"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+
+            <button
+                class="header-control"
+                id="rtlToggle"
+                type="button"
+                aria-label="Toggle RTL layout"
+            >
+                <span>RTL</span>
+            </button>
+
+
+
+             <a href="book.html"
+               class="header-cta">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Book a Group
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE -->
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     CONTACT HERO
+========================================================= -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-image"></div>
+
+    <div class="contact-hero-overlay"></div>
+
+
+    <div class="contact-hero-content reveal">
+
+        <span class="contact-hero-label">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            GET IN TOUCH
+
+        </span>
+
+
+        <h1>
+
+            We'd Love to
+            <span>Hear From You.</span>
+
+        </h1>
+
+
+        <p>
+
+            Have a question about your visit, group booking,
+            animal experience or anything else?
+            We're here to help.
+
+        </p>
+
+    </div>
+
+
+    
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 1 — CONTACT INTRO
+========================================================= -->
+
+<section class="section contact-intro">
+
+    <div class="container contact-intro-grid">
+
+        <div class="contact-intro-content reveal-left">
+
+            <span class="section-label">
+                CONTACT ZOOPARK
+            </span>
+
+            <h2>
+                Let's make your
+                <span>visit special.</span>
+            </h2>
+
+            <p>
+
+                Whether you're planning a family day out,
+                arranging a school trip, organising a birthday
+                celebration or simply have a question,
+                our friendly team is ready to help.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-intro-card reveal-right">
+
+            <div class="contact-card-icon">
+
+                <i class="fa-solid fa-paw"></i>
+
+            </div>
+
+            <h3>
+                We're happy to help
+            </h3>
+
+            <p>
+                Send us your question and our team
+                will get back to you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 2 — CONTACT DETAILS
+========================================================= -->
+
+<section class="section contact-details-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                REACH OUT
+            </span>
+
+            <h2>
+                We're here when
+                <span>you need us.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-details-grid">
+
+            <div class="contact-detail-card reveal">
+
+                <div class="detail-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+                    Speak directly with our team.
+                </p>
+
+                <a href="tel:+919876543210">
+                    +91 98765 43210
+                </a>
+
+            </div>
+
+
+            <div class="contact-detail-card reveal">
+
+                <div class="detail-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <h3>
+                    Email Us
+                </h3>
+
+                <p>
+                    Send us your questions anytime.
+                </p>
+
+                <a href="mailto:hello@zoopark.com">
+                    hello@zoopark.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-detail-card reveal">
+
+                <div class="detail-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+                <p>
+                    Monday – Sunday
+                </p>
+
+                <strong>
+                    9:00 AM – 6:00 PM
+                </strong>
+
+            </div>
+
+
+            <div class="contact-detail-card reveal">
+
+                <div class="detail-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>
+                    Find Us
+                </h3>
+
+                <p>
+                    Come and enjoy a day at ZooPark.
+                </p>
+
+                <a href="#location">
+                    View Location
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 3 — CONTACT FORM
+========================================================= -->
+
+<section class="section contact-form-section" id="contact-form">
+
+    <div class="container contact-form-grid">
+
+        <div class="contact-form-content reveal-left">
+
+            <span class="section-label">
+                SEND AN ENQUIRY
+            </span>
+
+            <h2>
+                Tell us how
+                <span>we can help.</span>
+            </h2>
+
+            <p>
+
+                Fill in the form and send us your enquiry.
+                We'll be happy to help with your questions.
+
+            </p>
+
+
+            <div class="form-note">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    We welcome family, school and group enquiries.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <form
+            class="contact-form reveal-right"
+            id="contactForm"
+        >
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter phone number"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Enquiry Type
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                    >
+
+                        <option value="">
+                            Select enquiry
+                        </option>
+
+                        <option>
+                            General Enquiry
+                        </option>
+
+                        <option>
+                            Visit Information
+                        </option>
+
+                        <option>
+                            Group Booking
+                        </option>
+
+                        <option>
+                            School Visit
+                        </option>
+
+                        <option>
+                            Birthday Booking
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Your Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Tell us how we can help..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="form-submit"
+            >
+
+                Send Enquiry
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <div
+                class="form-message"
+                id="formMessage"
+            ></div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 4 — WHY CONTACT US
+========================================================= -->
+
+<section class="section contact-help-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                HOW WE CAN HELP
+            </span>
+
+            <h2>
+                Questions are always
+                <span>welcome.</span>
+            </h2>
+
+            
+
+        </div>
+
+
+        <div class="help-grid">
+
+            <div class="help-card reveal">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+
+                <h3>
+                    Visit Information
+                </h3>
+
+                <p>
+                    Ask about tickets, opening hours,
+                    facilities and planning your visit.
+                </p>
+
+            </div>
+
+
+            <div class="help-card reveal">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <h3>
+                    Group Bookings
+                </h3>
+
+                <p>
+                    Planning a school trip, group day
+                    or birthday celebration?
+                </p>
+
+            </div>
+
+
+            <div class="help-card reveal">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+
+                <h3>
+                    Animal Experiences
+                </h3>
+
+                <p>
+                    Learn more about feeding, petting
+                    and meeting our friendly animals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 5 — MAP / LOCATION
+========================================================= -->
+
+<section
+    class="section location-section"
+    id="location"
+>
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                FIND ZOOPARK
+            </span>
+
+            <h2>
+                Come and see us
+                <span>at the farm.</span>
+            </h2>
+
+            
+
+        </div>
+
+
+        <div class="location-wrapper reveal">
+
+            <!-- MAP -->
+            <div class="map-box">
+
+                <!--
+                    Replace YOUR_ZOOPARK_LOCATION
+                    with your actual ZooPark location.
+                -->
+
+                <iframe
+                    src="https://www.google.com/maps?q=YOUR_ZOOPARK_LOCATION&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="ZooPark Location Map">
+                </iframe>
+
+            </div>
+
+
+            <!-- LOCATION INFO -->
+            <div class="location-info">
+
+                <span class="section-label">
+                    OUR LOCATION
+                </span>
+
+                <h3>
+                    Easy to find,
+                    <span>easy to enjoy.</span>
+                </h3>
+
+                <p>
+                    Plan your route before your visit and
+                    arrive ready for a fun-filled farm day.
+                </p>
+
+
+                <div class="location-list">
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            ZooPark Farm<br>
+                            Your Location Here
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            Open daily<br>
+                            9:00 AM – 6:00 PM
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-car"></i>
+
+                        <span>
+                            Parking available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://www.google.com/maps"
+                    target="_blank"
+                    class="map-button"
+                >
+
+                    Get Directions
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 6 — FAQ / QUICK QUESTIONS
+========================================================= -->
+
+<section class="section contact-faq-section">
+
+    <div class="container faq-grid">
+
+        <div class="faq-content reveal-left">
+
+            <span class="section-label">
+                QUICK QUESTIONS
+            </span>
+
+            <h2>
+                Need an answer
+                <span>right away?</span>
+            </h2>
+
+           
+
+        </div>
+
+
+        <div class="faq-list reveal-right">
+
+            <details>
+                <summary>
+                    Do I need to book before visiting?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                    Please check our Visit Us page for the
+                    latest ticket and booking information.
+                </p>
+
+            </details>
+
+
+            <details>
+                <summary>
+                    Can I arrange a group visit?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                    Yes. Visit our Group Bookings page
+                    for group and school visit information.
+                </p>
+
+            </details>
+
+
+            <details>
+                <summary>
+                    Can children interact with the animals?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+
+                <p>
+                    ZooPark offers family-friendly animal
+                    experiences. Please follow staff guidance
+                    during animal interactions.
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="contact-cta-section">
+
+    <div class="container contact-cta">
+
+        <div class="contact-cta-content reveal">
+
+            <span class="section-label">
+                READY TO VISIT?
+            </span>
+
+            <h2>
+                Let's plan your
+                <span>ZooPark day.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-cta-buttons reveal">
+
+            <a
+                href="visit.html"
+                class="cta-primary"
+            >
+
+                Plan Your Visit
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="groupbooking.html"
+                class="cta-secondary"
+            >
+
+                Group Bookings
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="container footer-grid">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                 <a
+                        href="index.html"
+                        class="footer-logo">
+
+                        <span class="footer-logo-image">
+
+                            <img
+                                src="photos/logo4.jpeg"
+                                alt="pawNest">
+
+                        </span>
+
+
+                        <span class="footer-logo-brand">
+
+                            <span class="footer-logo-text">
+
+                                <span class="logo-main">
+                                    paw
+                                </span>
+
+                                <span class="logo-accent">
+                                    Nest
+                                </span>
+
+                            </span>
+
+
+                            <small class="footer-logo-caption">
+                                A Home for Every Paw 🐾
+                            </small>
+
+                        </span>
+
+                    </a>
+
+
+                  
+
+                <p>
+                    A cheerful family-friendly petting zoo
+                    where little hands meet big hearts.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="animals.html">
+                    Our Animals
+                </a>
+
+                <a href="experience.html">
+                    Experiences
+                </a>
+
+                <a href="visit.html">
+                    Visit Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- INFORMATION -->
+            <div class="footer-column">
+
+                <h3>Information</h3>
+
+                <a href="visit.html">
+                    Opening Hours
+                </a>
+
+                <a href="visit.html">
+                    Tickets
+                </a>
+
+                <a href="bookings.html">
+                    Group Bookings
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-column contact-column">
+
+                <h3>Contact Us</h3>
+
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        ZooPark Farm
+                    </span>
+                </a>
+
+                <a href="tel:+919090909090">
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 9090909090
+                    </span>
+                </a>
+
+                <a href="mailto:hello@zoopark.com">
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>
+                        hello@zoopark.com
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+    ====================================================== -->
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-inner">
+
+            <p>
+                © 2026 ZooPark. All Rights Reserved.
+            </p>
+
+            <div class="footer-legal">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- CONTACT PAGE JS -->
+<script src="contact.js"></script>
+
+</body>
+</html>

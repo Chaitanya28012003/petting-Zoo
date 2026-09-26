@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Animals | pawNest</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="animals.css">
+
+    <!-- Instant Theme and RTL Initialization -->
+    <style id="themeAntiFlash">html.dark-mode { background-color: #111814; color-scheme: dark; } html.dark-mode .header { background: rgba(24,33,27,0.96) !important; border-bottom-color: #2B3830 !important; }</style>
+    <script>
+        (function() {
+            var theme = localStorage.getItem("farmTheme") || localStorage.getItem("zoopark-theme") || localStorage.getItem("pawnest-theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+                if (document.body) {
+                    document.body.classList.add("dark-mode");
+                } else {
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.body.classList.add("dark-mode");
+                    });
+                }
+            }
+            var dir = localStorage.getItem("farmDirection") || localStorage.getItem("zoopark-direction");
+            if (dir === "rtl") {
+                document.documentElement.setAttribute("dir", "rtl");
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header" id="header">
+
+        <div class="header-container">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-image">
+                    <img
+                        src="photos/logo4.jpeg"
+                        alt="pawNest Petting Zoo & Animal Farm">
+                </span>
+
+                <span class="logo-brand">
+
+                    <span class="logo-text">
+                        <span class="logo-main">paw</span><span class="logo-accent">Nest</span>
+                    </span>
+
+                    <small class="logo-caption">
+                        A Home for Every Paw 🐾
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav" id="mainNav">
+
+                <div class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        id="homeDropdownBtn"
+                        type="button">
+
+                        Home
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="index.html">
+                            Home 1
+                        </a>
+
+                        <a href="home2.html">
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="nav-item">
+
+                    <a
+                        href="animals.html"
+                        class="nav-link active">
+
+                        Our Animals
+
+                    </a>
+
+                </div>
+
+
+                <div class="nav-item">
+
+                    <a
+                        href="experience.html"
+                        class="nav-link">
+
+                        Experiences
+
+                    </a>
+
+                </div>
+
+
+                <div class="nav-item">
+
+                    <a
+                        href="visit.html"
+                        class="nav-link">
+
+                        Visit Us
+
+                    </a>
+
+                </div>
+
+
+                <div class="nav-item">
+
+                    <a
+                        href="groupbooking.html"
+                        class="nav-link">
+
+                        Group Bookings
+
+                    </a>
+
+                </div>
+
+
+                <div class="nav-item">
+
+                    <a
+                        href="contact.html"
+                        class="nav-link">
+
+                        Contact
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- HEADER ACTIONS -->
+
+             <div class="header-actions">
+
+            <button
+                class="header-control"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+
+            <button
+                class="header-control"
+                id="rtlToggle"
+                type="button"
+                aria-label="Toggle RTL layout"
+            >
+                <span>RTL</span>
+            </button>
+
+
+               
+
+
+                <a
+                    href="book.html"
+                    class="header-cta">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Book a Group
+
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+                aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="animals-hero">
+
+            <div class="animals-hero-image"></div>
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-content container reveal">
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    Meet Our Animals
+
+                </div>
+
+
+                <h1>
+
+                    Friendly Faces.
+
+                    <span>
+                        Big Farm Hearts.
+                    </span>
+
+                </h1>
+
+
+                <p>
+                    Say hello to the gentle, curious and playful animals
+                    who make every pawNest visit a special adventure.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#animals"
+                        class="btn btn-primary">
+
+                        Meet the Animals
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </a>
+
+
+                    <a
+                        href="visit.html"
+                        class="btn btn-secondary">
+
+                        Plan Your Visit
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section class="section animal-intro">
+
+            <div class="container intro-grid">
+
+
+                <div class="intro-content reveal-left">
+
+                    <span class="section-label">
+                        LIFE AT PAWNEST
+                    </span>
+
+
+                    <h2>
+
+                        Get closer to the
+
+                        <span>
+                            animals you love.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        From friendly goats and fluffy rabbits to
+                        beautiful ponies and gentle farm animals,
+                        every encounter at pawNest is designed to be
+                        fun, relaxed and family friendly.
+                    </p>
+
+
+                    <div class="intro-points">
+
+
+                        <div class="intro-point">
+
+                            <div class="point-icon">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Gentle Encounters
+                                </h3>
+
+                                <p>
+                                    Safe and friendly animal experiences.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="intro-point">
+
+                            <div class="point-icon">
+                                <i class="fa-solid fa-children"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Family Friendly
+                                </h3>
+
+                                <p>
+                                    Fun experiences for little and big visitors.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="intro-point">
+
+                            <div class="point-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Natural Surroundings
+                                </h3>
+
+                                <p>
+                                    Meet animals in a calm farm environment.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="intro-image reveal-right">
+
+                    <div class="image-frame">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=1200&q=85"
+                            alt="Friendly animal at the farm">
+
+                    </div>
+
+
+                    <div class="image-note">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        Made for curious little explorers
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANIMALS
+        ================================================== -->
+
+        <section
+            class="section animals-section"
+            id="animals">
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+                    <span class="section-label">
+                        MEET THE FAMILY
+                    </span>
+
+                    <h2>
+
+                        Our animals have
+
+                        <span>
+                            big personalities.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="animals-grid">
+
+
+                    <!-- GOAT -->
+
+                    <article class="animal-card reveal">
+
+                        <div class="animal-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=900&q=85"
+                                alt="Friendly goat">
+
+                            <span class="animal-tag">
+                                Friendly
+                            </span>
+
+                        </div>
+
+
+                        <div class="animal-content">
+
+                            <div class="animal-icon">
+                                <i class="fa-solid fa-paw"></i>
+                            </div>
+
+                            <h3>
+                                Goats
+                            </h3>
+
+                            <p>
+                                Curious, playful and always ready
+                                to say hello to visitors.
+                            </p>
+
+                            <a
+                                href="#"
+                                class="animal-link">
+
+                                Meet the goats
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RABBIT -->
+
+                    <article class="animal-card reveal">
+
+                        <div class="animal-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=85"
+                                alt="Cute rabbit">
+
+                            <span class="animal-tag">
+                                Gentle
+                            </span>
+
+                        </div>
+
+
+                        <div class="animal-content">
+
+                            <div class="animal-icon">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            <h3>
+                                Rabbits
+                            </h3>
+
+                            <p>
+                                Soft, gentle and perfect for
+                                calm little animal encounters.
+                            </p>
+
+                            <a
+                                href="#"
+                                class="animal-link">
+
+                                Meet the rabbits
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PONIES -->
+
+                    <article class="animal-card reveal">
+
+                        <div class="animal-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=85"
+                                alt="Beautiful pony">
+
+                            <span class="animal-tag">
+                                Beautiful
+                            </span>
+
+                        </div>
+
+
+                        <div class="animal-content">
+
+                            <div class="animal-icon">
+                                <i class="fa-solid fa-horse"></i>
+                            </div>
+
+                            <h3>
+                                Ponies
+                            </h3>
+
+                            <p>
+                                Beautiful farm friends that
+                                visitors love meeting.
+                            </p>
+
+                            <a
+                                href="#"
+                                class="animal-link">
+
+                                Meet the ponies
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SHEEP -->
+
+                    <article class="animal-card reveal">
+
+                        <div class="animal-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=900&q=85"
+                                alt="Farm sheep">
+
+                            <span class="animal-tag">
+                                Calm
+                            </span>
+
+                        </div>
+
+
+                        <div class="animal-content">
+
+                            <div class="animal-icon">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+
+                            <h3>
+                                Sheep
+                            </h3>
+
+                            <p>
+                                Calm and fluffy friends that
+                                bring a peaceful farm feeling.
+                            </p>
+
+                            <a
+                                href="#"
+                                class="animal-link">
+
+                                Meet the sheep
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ALPACAS -->
+
+                    <article class="animal-card reveal">
+
+                        <div class="animal-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=85"
+                                alt="Alpaca at a farm">
+
+                            <span class="animal-tag">
+                                Curious
+                            </span>
+
+                        </div>
+
+
+                        <div class="animal-content">
+
+                            <div class="animal-icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <h3>
+                                Alpacas
+                            </h3>
+
+                            <p>
+                                Curious and charming animals
+                                that visitors love to photograph.
+                            </p>
+
+                            <a
+                                href="#"
+                                class="animal-link">
+
+                                Meet the alpacas
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- DUCKS -->
+
+                    <article class="animal-card reveal">
+
+                        <div class="animal-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1200&q=85"
+                                alt="Duck at the farm">
+
+                            <span class="animal-tag">
+                                Playful
+                            </span>
+
+                        </div>
+
+
+                        <div class="animal-content">
+
+                            <div class="animal-icon">
+                                <i class="fa-solid fa-feather"></i>
+                            </div>
+
+                            <h3>
+                                Ducks
+                            </h3>
+
+                            <p>
+                                Cheerful little farm friends
+                                that keep the pond lively.
+                            </p>
+
+                            <a
+                                href="#"
+                                class="animal-link">
+
+                                Meet the ducks
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPERIENCE
+        ================================================== -->
+
+        <section class="section animal-experience">
+
+            <div class="container experience-layout">
+
+
+                <div class="experience-image reveal-left">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=1200&q=85"
+                        alt="Family animal experience">
+
+                </div>
+
+
+                <div class="experience-content reveal-right">
+
+                    <span class="section-label">
+                        MORE THAN A VISIT
+                    </span>
+
+
+                    <h2>
+
+                        Every animal
+
+                        <span>
+                            has a story.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        pawNest gives children and families a chance
+                        to slow down, discover farm life and create
+                        memories around animals they may have never
+                        met before.
+                    </p>
+
+
+                    <div class="experience-features">
+
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            Safe animal encounters
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            Educational experiences
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            Family-friendly activities
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            Memorable farm adventures
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="experience.html"
+                        class="text-button">
+
+                        Explore Experiences
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANIMAL STORY
+        ================================================== -->
+
+        <section class="animal-story-section">
+
+            <div class="animal-story-container">
+
+
+                <div class="animal-story-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=1400&q=85"
+                        alt="Friendly farm animal">
+
+                </div>
+
+
+                <div class="animal-story-content">
+
+                    <span class="section-eyebrow">
+                        MORE THAN JUST ANIMALS
+                    </span>
+
+
+                    <h2>
+
+                        Every animal has
+
+                        <span>
+                            a story to share.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        From gentle goats and fluffy alpacas to curious ducks
+                        and playful rabbits, every animal at pawNest brings
+                        something special to your visit.
+                    </p>
+
+
+                    <p>
+                        Take your time, get closer, learn about our animals,
+                        and enjoy simple moments that the whole family can remember.
+                    </p>
+
+
+                    <a
+                        href="experience.html"
+                        class="story-btn">
+
+                        Discover Our Experiences
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="animals-cta-section">
+
+            <div class="animals-cta">
+
+
+                <div class="animals-cta-content">
+
+                    <span class="cta-eyebrow">
+                        MEET YOUR NEW FRIENDS
+                    </span>
+
+
+                    <h2>
+
+                        Come closer to the animals
+
+                        <span>
+                            you'll love.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Discover gentle goats, curious alpacas, playful ducks,
+                        fluffy rabbits, and more at pawNest.
+                    </p>
+
+                </div>
+
+
+                <div class="animals-cta-actions">
+
+                    <a
+                        href="visit.html"
+                        class="cta-btn cta-primary">
+
+                        Plan Your Visit
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a
+                        href="experience.html"
+                        class="cta-btn cta-secondary">
+
+                        Explore Experiences
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="container footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="footer-logo">
+
+                        <span class="footer-logo-image">
+
+                            <img
+                                src="photos/logo4.jpeg"
+                                alt="pawNest">
+
+                        </span>
+
+
+                        <span class="footer-logo-brand">
+
+                            <span class="footer-logo-text">
+
+                                <span class="logo-main">
+                                    paw
+                                </span>
+
+                                <span class="logo-accent">
+                                    Nest
+                                </span>
+
+                            </span>
+
+
+                            <small class="footer-logo-caption">
+                                A Home for Every Paw 🐾
+                            </small>
+
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        A cheerful family-friendly petting zoo
+                        where little hands meet big hearts.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="#" aria-label="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="animals.html">
+                        Our Animals
+                    </a>
+
+                    <a href="experience.html">
+                        Experiences
+                    </a>
+
+                    <a href="visit.html">
+                        Visit Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- INFORMATION -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Information
+                    </h3>
+
+                    <a href="visit.html">
+                        Opening Hours
+                    </a>
+
+                    <a href="visit.html">
+                        Tickets
+                    </a>
+
+                    <a href="groupbooking.html">
+                        Group Bookings
+                    </a>
+
+                    <a href="#">
+                        FAQs
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column contact-column">
+
+                    <h3>
+                        Contact Us
+                    </h3>
+
+
+                    <a href="#">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        PawNest Farm
+
+                    </a>
+
+
+                    <a href="tel:+919090909090">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +91 9090909090
+
+                    </a>
+
+
+                    <a href="mailto:hello@pawnest.com">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        hello@Pawnest.com
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-inner">
+
+                <p>
+                    © 2026 pawNest. All Rights Reserved.
+                </p>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="animals.js"></script>
+
+</body>
+</html>

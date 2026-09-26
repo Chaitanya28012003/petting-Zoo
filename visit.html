@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visit Us | ZooPark</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="visit.css">
+
+    <!-- Instant Theme and RTL Initialization -->
+    <style id="themeAntiFlash">html.dark-mode { background-color: #111814; color-scheme: dark; } html.dark-mode .header { background: rgba(24,33,27,0.96) !important; border-bottom-color: #2B3830 !important; }</style>
+    <script>
+        (function() {
+            var theme = localStorage.getItem("farmTheme") || localStorage.getItem("zoopark-theme") || localStorage.getItem("pawnest-theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+                if (document.body) {
+                    document.body.classList.add("dark-mode");
+                } else {
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.body.classList.add("dark-mode");
+                    });
+                }
+            }
+            var dir = localStorage.getItem("farmDirection") || localStorage.getItem("zoopark-direction");
+            if (dir === "rtl") {
+                document.documentElement.setAttribute("dir", "rtl");
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header" id="header">
+
+    <div class="header-container">
+
+        <!-- LOGO -->
+         <a href="index.html" class="logo">
+
+                <span class="logo-image">
+                    <img
+                        src="photos/logo4.jpeg"
+                        alt="pawNest Petting Zoo & Animal Farm">
+                </span>
+
+                <span class="logo-brand">
+
+                    <span class="logo-text">
+                        <span class="logo-main">paw</span><span class="logo-accent">Nest</span>
+                    </span>
+
+                    <small class="logo-caption">
+                        A Home for Every Paw 🐾
+                    </small>
+
+                </span>
+
+            </a>
+
+
+        <!-- NAV -->
+        <nav class="nav" id="mainNav">
+
+            <div class="nav-item dropdown">
+
+                <button class="nav-link dropdown-toggle" id="homeDropdown">
+                    Home
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-item">
+                <a href="animals.html" class="nav-link">
+                    Our Animals
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="experience.html" class="nav-link">
+                    Experiences
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="visit.html" class="nav-link active">
+                    Visit Us
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="groupbooking.html" class="nav-link">
+                    Group Bookings
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="contact.html" class="nav-link">
+                    Contact
+                </a>
+            </div>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+
+            <button
+                class="header-control"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+
+            <button
+                class="header-control"
+                id="rtlToggle"
+                type="button"
+                aria-label="Toggle RTL layout"
+            >
+                <span>RTL</span>
+            </button>
+
+
+             <a href="book.html"
+               class="header-cta">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Book a Group
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     SECTION 1 — HERO
+========================================================= -->
+
+<section class="visit-hero">
+
+    <div class="visit-hero-image"></div>
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content container">
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Plan Your ZooPark Visit
+
+        </div>
+
+
+        <h1>
+            A Day Full of
+            <span>Farm Adventures.</span>
+        </h1>
+
+
+        <p>
+            Come meet our friendly animals, enjoy hands-on
+            experiences and make beautiful family memories
+            at ZooPark.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#tickets" class="btn btn-primary">
+
+                View Tickets
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
+
+
+            <a href="#hours" class="btn btn-secondary">
+
+                Opening Hours
+
+                <i class="fa-regular fa-clock"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+   
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 2 — PLAN YOUR VISIT
+========================================================= -->
+
+<section class="section visit-intro">
+
+    <div class="container intro-grid">
+
+        <div class="intro-content reveal-left">
+
+            <span class="section-label">
+                YOUR DAY AT ZOOPARK
+            </span>
+
+            <h2>
+                Come Curious.
+                <span>Leave Happy.</span>
+            </h2>
+
+            <p>
+                ZooPark is designed for relaxed family days,
+                playful animal encounters and simple outdoor
+                adventures. Take your time, meet the animals
+                and enjoy the farm at your own pace.
+            </p>
+
+
+            <div class="intro-points">
+
+                <div class="intro-point">
+
+                    <div class="point-icon">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            Friendly Animals
+                        </h3>
+
+                        <p>
+                            Meet gentle and curious farm animals.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-point">
+
+                    <div class="point-icon">
+                        <i class="fa-solid fa-children"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            Family Friendly
+                        </h3>
+
+                        <p>
+                            Fun experiences for little and big visitors.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-point">
+
+                    <div class="point-icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            Memorable Moments
+                        </h3>
+
+                        <p>
+                            Plenty of beautiful moments to remember.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-image reveal-right">
+
+            <div class="image-frame">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517486430290-35657bdcef51?auto=format&fit=crop&w=1200&q=85"
+                    alt="Family enjoying a farm">
+
+            </div>
+
+            <div class="image-note">
+
+                <i class="fa-solid fa-heart"></i>
+
+                Make a day of it
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 3 — OPENING HOURS
+========================================================= -->
+
+<section class="section hours-section" id="hours">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                WHEN TO VISIT
+            </span>
+
+            <h2>
+                Opening <span>Hours.</span>
+            </h2>
+
+           
+
+        </div>
+
+
+        <div class="hours-layout">
+
+            <div class="hours-image reveal-left">
+
+              <img
+    src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1200&q=85"
+    alt="Family-friendly farm animals"
+    loading="lazy">
+            </div>
+
+
+            <div class="hours-card reveal-right">
+
+                <div class="hours-card-header">
+
+                    <div class="hours-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ZOOPARK HOURS
+                        </span>
+
+                        <h3>
+                            Plan Your Day
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hours-row">
+
+                    <div>
+                        <strong>Monday – Friday</strong>
+                        <small>Weekdays</small>
+                    </div>
+
+                    <strong>
+                        9:00 AM – 5:00 PM
+                    </strong>
+
+                </div>
+
+
+                <div class="hours-row">
+
+                    <div>
+                        <strong>Saturday</strong>
+                        <small>Weekend</small>
+                    </div>
+
+                    <strong>
+                        9:00 AM – 6:00 PM
+                    </strong>
+
+                </div>
+
+
+                <div class="hours-row">
+
+                    <div>
+                        <strong>Sunday</strong>
+                        <small>Weekend</small>
+                    </div>
+
+                    <strong>
+                        9:00 AM – 6:00 PM
+                    </strong>
+
+                </div>
+
+
+                <div class="hours-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <p>
+                        Hours may vary for special events
+                        and seasonal activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 4 — TICKETS
+========================================================= -->
+
+<section class="section tickets-section" id="tickets">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                TICKETS & ADMISSION
+            </span>
+
+            <h2>
+                Simple Tickets.
+                <span>Happy Days.</span>
+            </h2>
+
+           
+
+        </div>
+
+
+        <div class="ticket-grid">
+
+            <!-- CHILD -->
+            <div class="ticket-card reveal">
+
+                <div class="ticket-icon">
+                    <i class="fa-solid fa-child"></i>
+                </div>
+
+                <span class="ticket-label">
+                    LITTLE EXPLORER
+                </span>
+
+                <h3>
+                    Child
+                </h3>
+
+                <p>
+                    For young visitors ready to discover
+                    the farm animals.
+                </p>
+
+                <div class="ticket-price">
+                    <span>From</span>
+                    ₹250
+                </div>
+
+                <a href="contact.html" class="ticket-link">
+                    Enquire Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- ADULT -->
+            <div class="ticket-card featured reveal">
+
+                <div class="popular-badge">
+                    Popular
+                </div>
+
+                <div class="ticket-icon">
+                    <i class="fa-solid fa-person"></i>
+                </div>
+
+                <span class="ticket-label">
+                    FARM FRIEND
+                </span>
+
+                <h3>
+                    Adult
+                </h3>
+
+                <p>
+                    Enjoy the full ZooPark experience
+                    alongside your family.
+                </p>
+
+                <div class="ticket-price">
+                    <span>From</span>
+                    ₹350
+                </div>
+
+                <a href="contact.html" class="ticket-link">
+                    Enquire Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- FAMILY -->
+            <div class="ticket-card reveal">
+
+                <div class="ticket-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <span class="ticket-label">
+                    FAMILY DAY
+                </span>
+
+                <h3>
+                    Family
+                </h3>
+
+                <p>
+                    A convenient option for families
+                    planning a full day together.
+                </p>
+
+                <div class="ticket-price">
+                    <span>From</span>
+                    ₹999
+                </div>
+
+                <a href="contact.html" class="ticket-link">
+                    Enquire Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 5 — GETTING HERE
+========================================================= -->
+
+<section class="section location-section">
+
+    <div class="container location-grid">
+
+        <div class="location-content reveal-left">
+
+            <span class="section-label">
+                FIND US
+            </span>
+
+            <h2>
+                Easy to Find.
+                <span>Easy to Enjoy.</span>
+            </h2>
+
+            <p>
+                Make your way to ZooPark and enjoy a peaceful
+                farm escape away from the everyday rush.
+            </p>
+
+
+            <div class="location-details">
+
+                <div class="location-item">
+
+                    <div class="location-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            Our Location
+                        </h3>
+
+                        <p>
+                            ZooPark Farm Experience<br>
+                            Your City, India
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="location-item">
+
+                    <div class="location-icon">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            By Car
+                        </h3>
+
+                        <p>
+                            Convenient parking is available
+                            for visiting families.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="location-item">
+
+                    <div class="location-icon">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            Need Directions?
+                        </h3>
+
+                        <p>
+                            Contact our team before your visit
+                            for directions and travel information.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="contact.html" class="btn btn-primary location-btn">
+
+                Contact Us
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="location-map reveal-right">
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85"
+                alt="Beautiful outdoor farm landscape">
+
+            <div class="map-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+
+                    <strong>
+                        ZooPark
+                    </strong>
+
+                    <span>
+                        Family Farm Experience
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SECTION 6 — BEFORE YOU VISIT
+========================================================= -->
+
+<section class="section tips-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                BEFORE YOU ARRIVE
+            </span>
+
+            <h2>
+                A Few Things to
+                <span>Know.</span>
+            </h2>
+
+           
+
+        </div>
+
+
+        <div class="tips-grid">
+
+            <div class="tip-card reveal">
+
+                <div class="tip-number">
+                    01
+                </div>
+
+                <i class="fa-solid fa-shoe-prints"></i>
+
+                <h3>
+                    Wear Comfortable Shoes
+                </h3>
+
+                <p>
+                    You will be exploring outdoor spaces,
+                    so comfortable footwear is a good idea.
+                </p>
+
+            </div>
+
+
+            <div class="tip-card reveal">
+
+                <div class="tip-number">
+                    02
+                </div>
+
+                <i class="fa-solid fa-sun"></i>
+
+                <h3>
+                    Dress for the Weather
+                </h3>
+
+                <p>
+                    Bring sun protection and dress comfortably
+                    for your day outdoors.
+                </p>
+
+            </div>
+
+
+            <div class="tip-card reveal">
+
+                <div class="tip-number">
+                    03
+                </div>
+
+                <i class="fa-solid fa-camera"></i>
+
+                <h3>
+                    Bring Your Camera
+                </h3>
+
+                <p>
+                    There will be plenty of sweet animal
+                    moments worth remembering.
+                </p>
+
+            </div>
+
+
+            <div class="tip-card reveal">
+
+                <div class="tip-number">
+                    04
+                </div>
+
+                <i class="fa-solid fa-heart"></i>
+
+                <h3>
+                    Take Your Time
+                </h3>
+
+                <p>
+                    Slow down, explore and enjoy the farm
+                    experience together.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FINAL CTA -->
+
+        <div class="visit-cta reveal">
+
+            <div>
+
+                <span class="section-label">
+                    READY FOR A FARM DAY?
+                </span>
+
+                <h2>
+                    Let's make your
+                    <span>ZooPark day special.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="visit-cta-buttons">
+
+                <a href="bookings.html" class="btn btn-primary">
+
+                    Plan Your Visit
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="contact.html" class="btn btn-outline">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+        <div class="footer-main">
+
+            <div class="container footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="footer-logo">
+
+                        <span class="footer-logo-image">
+
+                            <img
+                                src="photos/logo4.jpeg"
+                                alt="pawNest">
+
+                        </span>
+
+
+                        <span class="footer-logo-brand">
+
+                            <span class="footer-logo-text">
+
+                                <span class="logo-main">
+                                    paw
+                                </span>
+
+                                <span class="logo-accent">
+                                    Nest
+                                </span>
+
+                            </span>
+                            <small class="footer-logo-caption">
+                                A Home for Every Paw 🐾
+                            </small>
+
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        A cheerful family-friendly petting zoo
+                        where little hands meet big hearts.
+
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="#" aria-label="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="home.html">
+                        Home
+                    </a>
+
+                    <a href="animals.html">
+                        Our Animals
+                    </a>
+
+                    <a href="experience.html">
+                        Experiences
+                    </a>
+
+                    <a href="visit.html">
+                        Visit Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- INFORMATION -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Information
+                    </h3>
+
+                    <a href="visit.html">
+                        Opening Hours
+                    </a>
+
+                    <a href="visit.html">
+                        Tickets
+                    </a>
+
+                    <a href="bookings.html">
+                        Group Bookings
+                    </a>
+
+                    <a href="#">
+                        FAQs
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column contact-column">
+
+                    <h3>
+                        Contact Us
+                    </h3>
+
+
+                    <a href="#">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Pawnest Farm
+
+                    </a>
+
+
+                    <a href="tel:+919876543210">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +91 9090909090
+
+                    </a>
+
+
+                    <a href="mailto:hello@zoopark.com">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        hello@Pawnest.com
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-inner">
+
+                <p>
+                    © 2026 ZooPark. All Rights Reserved.
+                </p>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JS -->
+    <script src="visit.js"></script>
+
+</body>
+
+</html>
+                  
+
+
+
+
+
+
+   

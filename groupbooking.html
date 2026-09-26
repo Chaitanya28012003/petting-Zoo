@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Group Bookings | Petting Zoo & Animal Farm Experience</title>
+
+    <meta name="description"
+          content="Plan memorable school trips, birthday celebrations and group visits at our cheerful petting zoo and animal farm.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="groupbooking.css">
+
+    <!-- Instant Theme and RTL Initialization -->
+    <style id="themeAntiFlash">html.dark-mode { background-color: #111814; color-scheme: dark; } html.dark-mode .header { background: rgba(24,33,27,0.96) !important; border-bottom-color: #2B3830 !important; }</style>
+    <script>
+        (function() {
+            var theme = localStorage.getItem("farmTheme") || localStorage.getItem("zoopark-theme") || localStorage.getItem("pawnest-theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+                if (document.body) {
+                    document.body.classList.add("dark-mode");
+                } else {
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.body.classList.add("dark-mode");
+                    });
+                }
+            }
+            var dir = localStorage.getItem("farmDirection") || localStorage.getItem("zoopark-direction");
+            if (dir === "rtl") {
+                document.documentElement.setAttribute("dir", "rtl");
+            }
+        })();
+    </script>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header" id="header">
+
+    <div class="header-container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+
+                <span class="logo-image">
+                    <img
+                        src="photos/logo4.jpeg"
+                        alt="pawNest Petting Zoo & Animal Farm">
+                </span>
+
+                <span class="logo-brand">
+
+                    <span class="logo-text">
+                        <span class="logo-main">paw</span><span class="logo-accent">Nest</span>
+                    </span>
+
+                    <small class="logo-caption">
+                        A Home for Every Paw 🐾
+                    </small>
+
+                </span>
+
+            </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="nav" id="nav">
+
+            <div class="nav-item dropdown">
+
+                <button class="nav-link dropdown-toggle">
+                    Home
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-item">
+                <a href="animals.html" class="nav-link">
+                    Our Animals
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="experience.html" class="nav-link">
+                    Experiences
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="visit.html" class="nav-link">
+                    Visit Us
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="groupbooking.html"
+                   class="nav-link active">
+                    Group Bookings
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="contact.html" class="nav-link">
+                    Contact
+                </a>
+            </div>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+
+            <button class="header-control"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+
+            <button class="header-control"
+                    id="rtlToggle"
+                    type="button">
+
+               
+
+                <span>RTL</span>
+
+            </button>
+
+
+            <a href="book.html"
+               class="header-cta">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Book a Group
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE BUTTON -->
+        <button class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu"
+                type="button">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="group-hero">
+
+    <div class="group-hero-image"></div>
+
+    <div class="group-hero-overlay"></div>
+
+
+    <div class="hero-content container reveal">
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-users"></i>
+
+            School & Group Experiences
+
+        </div>
+
+
+        <h1>
+
+            Bring Your Group
+            <span>Closer to the Animals.</span>
+
+        </h1>
+
+
+        <p>
+            From school adventures to birthday celebrations,
+            create a joyful day filled with friendly animals,
+            hands-on activities and unforgettable farm moments.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#booking-form"
+               class="btn btn-primary">
+
+                Plan Your Group Visit
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="#school-trips"
+               class="btn btn-secondary">
+
+                Explore Groups
+
+                <i class="fa-solid fa-users"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+   
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 1 — GROUP INTRO
+========================================================= -->
+
+<section class="section group-intro">
+
+    <div class="container intro-grid">
+
+        <div class="intro-content reveal-left">
+
+            <span class="section-label">
+                GROUP DAYS MADE EASY
+            </span>
+
+            <h2>
+                One Farm.
+                <span>Many Happy Memories.</span>
+            </h2>
+
+            <p>
+                A group visit is a wonderful way to learn,
+                celebrate and spend meaningful time together.
+                Our farm experiences are designed to keep
+                children engaged while giving group leaders
+                a relaxed and enjoyable day.
+            </p>
+
+
+            <div class="intro-points">
+
+                <div class="intro-point">
+
+                    <div class="point-icon">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+
+                    <div>
+                        <h3>Friendly Animal Encounters</h3>
+                        <p>
+                            Meet and interact with our farm animals.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-point">
+
+                    <div class="point-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+
+                    <div>
+                        <h3>Group-Friendly Activities</h3>
+                        <p>
+                            Activities created for shared experiences.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-point">
+
+                    <div class="point-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div>
+                        <h3>Memories to Take Home</h3>
+                        <p>
+                            A cheerful day everyone can remember.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-image reveal-right">
+
+            <div class="image-frame">
+
+               <img
+    src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&q=85"
+    alt="Happy animal at the farm"
+    loading="lazy">
+            </div>
+
+            <div class="image-note">
+
+                <i class="fa-solid fa-star"></i>
+
+                Made for happy groups
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 2 — SCHOOL TRIPS
+========================================================= -->
+
+<section class="section school-section"
+         id="school-trips">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                SCHOOL TRIPS
+            </span>
+
+            <h2>
+                Learning Feels Better
+                <span>Outside the Classroom.</span>
+            </h2>
+
+            
+
+        </div>
+
+
+        <div class="school-grid">
+
+            <article class="group-card reveal">
+
+                <div class="group-card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
+                        alt="Children enjoying a farm visit"
+                        loading="lazy">
+
+                    <span class="image-tag">
+                        Educational
+                    </span>
+
+                </div>
+
+
+                <div class="group-card-content">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <h3>
+                        Discover Farm Life
+                    </h3>
+
+                    <p>
+                        Introduce children to animals and
+                        simple farm experiences through
+                        fun, interactive activities.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="group-card reveal">
+
+                <div class="group-card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=1000&q=85"
+                        alt="Friendly farm animal"
+                        loading="lazy">
+
+                    <span class="image-tag">
+                        Hands-On
+                    </span>
+
+                </div>
+
+
+                <div class="group-card-content">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+
+                    <h3>
+                        Learn Through Nature
+                    </h3>
+
+                    <p>
+                        Encourage curiosity and observation
+                        while children experience the farm
+                        environment.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="group-card reveal">
+
+                <div class="group-card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=1000&q=85"
+                        alt="Farm animals"
+                        loading="lazy">
+
+                    <span class="image-tag">
+                        Together
+                    </span>
+
+                </div>
+
+
+                <div class="group-card-content">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-children"></i>
+                    </div>
+
+                    <h3>
+                        Make It a Shared Day
+                    </h3>
+
+                    <p>
+                        Give students a chance to explore,
+                        interact and enjoy the farm together.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 3 — BIRTHDAY GROUPS
+========================================================= -->
+
+<section class="section birthday-section">
+
+    <div class="container birthday-layout">
+
+        <div class="birthday-image reveal-left">
+
+            <img
+                src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=85"
+                alt="Birthday celebration"
+                loading="lazy">
+
+            <div class="birthday-badge">
+
+                <i class="fa-solid fa-cake-candles"></i>
+
+                Celebrate Together
+
+            </div>
+
+        </div>
+
+
+        <div class="birthday-content reveal-right">
+
+            <span class="section-label">
+                BIRTHDAY GROUPS
+            </span>
+
+            <h2>
+                A Birthday
+                <span>They'll Talk About.</span>
+            </h2>
+
+            <p>
+                Swap the ordinary birthday routine for a
+                cheerful animal-filled adventure. Bring
+                friends and family together for a celebration
+                surrounded by nature and farm animals.
+            </p>
+
+
+            <div class="birthday-list">
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Animal encounters
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Fun group activities
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Family-friendly atmosphere
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Plenty of photo moments
+                </div>
+
+            </div>
+
+
+            <a href="#booking-form"
+               class="text-button">
+
+                Plan a Birthday Group
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 4 — WHAT'S INCLUDED
+========================================================= -->
+
+<section class="section included-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                WHAT'S INCLUDED
+            </span>
+
+            <h2>
+                More Than Just
+                <span>A Visit.</span>
+            </h2>
+
+            <p>
+                Your group can enjoy a selection of simple,
+                cheerful farm experiences designed to make
+                the day feel special.
+            </p>
+
+        </div>
+
+
+        <div class="included-grid">
+
+            <div class="included-card reveal">
+
+                <div class="included-icon">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+
+                <h3>Animal Encounters</h3>
+
+                <p>
+                    Spend time getting to know our friendly
+                    farm animals.
+                </p>
+
+            </div>
+
+
+            <div class="included-card reveal">
+
+                <div class="included-icon">
+                    <i class="fa-solid fa-carrot"></i>
+                </div>
+
+                <h3>Animal Feeding</h3>
+
+                <p>
+                    Enjoy memorable moments while feeding
+                    selected animals.
+                </p>
+
+            </div>
+
+
+            <div class="included-card reveal">
+
+                <div class="included-icon">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+
+                <h3>Outdoor Exploration</h3>
+
+                <p>
+                    Give your group time to explore the
+                    cheerful farm surroundings.
+                </p>
+
+            </div>
+
+
+            <div class="included-card reveal">
+
+                <div class="included-icon">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+
+                <h3>Photo Moments</h3>
+
+                <p>
+                    Capture the special moments from your
+                    group adventure.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 5 — GROUP OPTIONS
+========================================================= -->
+
+<section class="section packages-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                GROUP OPTIONS
+            </span>
+
+            <h2>
+                Choose the Day
+                <span>That Fits Your Group.</span>
+            </h2>
+
+           
+
+        </div>
+
+
+        <div class="packages-grid">
+
+            <article class="package-card reveal">
+
+                <div class="package-number">
+                    01
+                </div>
+
+                <i class="fa-solid fa-school package-icon"></i>
+
+                <h3>
+                    School Groups
+                </h3>
+
+                <p>
+                    A playful educational outing with
+                    animal encounters and farm discovery.
+                </p>
+
+                <a href="#booking-form">
+                    Enquire Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="package-card featured reveal">
+
+                <div class="popular-label">
+                    Family Favourite
+                </div>
+
+                <div class="package-number">
+                    02
+                </div>
+
+                <i class="fa-solid fa-cake-candles package-icon"></i>
+
+                <h3>
+                    Birthday Groups
+                </h3>
+
+                <p>
+                    Celebrate with friends and family
+                    surrounded by animals and nature.
+                </p>
+
+                <a href="#booking-form">
+                    Plan a Birthday
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="package-card reveal">
+
+                <div class="package-number">
+                    03
+                </div>
+
+                <i class="fa-solid fa-people-group package-icon"></i>
+
+                <h3>
+                    Community Groups
+                </h3>
+
+                <p>
+                    Create a relaxed group outing with
+                    shared farm experiences.
+                </p>
+
+                <a href="#booking-form">
+                    Enquire Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 6 — PLAN YOUR VISIT
+========================================================= -->
+
+<section class="section planning-section">
+
+    <div class="container planning-layout">
+
+        <div class="planning-content reveal-left">
+
+            <span class="section-label">
+                PLAN AHEAD
+            </span>
+
+            <h2>
+                Let's Make Your
+                <span>Group Day Simple.</span>
+            </h2>
+
+            <p>
+                A little planning helps us prepare the best
+                possible experience for your group. Tell us
+                what you're planning and our team can help
+                with the details.
+            </p>
+
+
+            <div class="planning-steps">
+
+                <div class="planning-step">
+
+                    <span>01</span>
+
+                    <div>
+                        <h3>Tell Us About Your Group</h3>
+                        <p>
+                            Share your group type and approximate
+                            number of visitors.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="planning-step">
+
+                    <span>02</span>
+
+                    <div>
+                        <h3>Choose Your Date</h3>
+                        <p>
+                            Let us know your preferred visit date
+                            and timing.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="planning-step">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>We'll Help You Plan</h3>
+                        <p>
+                            Our team can help organise the details
+                            of your group visit.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="planning-image reveal-right">
+
+            <img
+                src="https://images.unsplash.com/photo-1546238232-20216dec9f72?auto=format&fit=crop&w=1400&q=85"
+                alt="Family farm experience"
+                loading="lazy">
+
+            <div class="planning-note">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Plan ahead for a smoother visit
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 7 — BOOKING FORM
+========================================================= -->
+
+<section class="section booking-section"
+         id="booking-form">
+
+    <div class="container booking-wrapper">
+
+        <div class="booking-heading reveal">
+
+            <span class="section-label">
+                GROUP ENQUIRY
+            </span>
+
+            <h2>
+                Tell Us About
+                <span>Your Group.</span>
+            </h2>
+
+            
+
+        </div>
+
+
+        <form class="booking-form reveal"
+              id="groupBookingForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="groupType">
+                        Group Type
+                    </label>
+
+                    <select id="groupType"
+                            name="groupType"
+                            required>
+
+                        <option value="">
+                            Select group type
+                        </option>
+
+                        <option value="school">
+                            School Trip
+                        </option>
+
+                        <option value="birthday">
+                            Birthday Group
+                        </option>
+
+                        <option value="community">
+                            Community Group
+                        </option>
+
+                        <option value="other">
+                            Other Group
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="groupSize">
+                        Approximate Group Size
+                    </label>
+
+                    <input
+                        type="number"
+                        id="groupSize"
+                        name="groupSize"
+                        min="1"
+                        placeholder="Number of visitors"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="visitDate">
+                        Preferred Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="visitDate"
+                        name="visitDate">
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group full-width">
+
+                <label for="message">
+                    Tell Us More
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Tell us about your group, activities or anything you'd like us to know..."></textarea>
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn btn-primary form-submit">
+
+                Send Group Enquiry
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+
+            <p class="form-message"
+               id="formMessage"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+<!-- =========================================================
+     GROUP BOOKINGS CTA
+========================================================= -->
+<section class="cta-section group-cta">
+    <div class="container">
+        <div class="cta-box">
+
+            <div class="cta-content">
+                <span class="section-label">PLAN A GROUP DAY?</span>
+
+                <h2>
+                    Make your group day
+                    <span>special at ZooPark.</span>
+                </h2>
+
+                <p>
+                    Planning a school trip, birthday celebration,
+                    or family group visit? We would love to welcome you.
+                </p>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">
+                    Enquire Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="visit.html" class="btn btn-outline">
+                    Plan Your Visit
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+            
+
+           
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="container footer-grid">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+               <a href="index.html" class="footer-logo">
+                        <span class="footer-logo-image">
+                            <img src="photos/logo4.jpeg" alt="pawNest">
+                        </span>
+                        <span class="footer-logo-brand">
+                            <span class="footer-logo-text">
+                                <span class="logo-main">paw</span><span class="logo-accent">Nest</span>
+                            </span>
+                            <small class="footer-logo-caption">A Home for Every Paw 🐾</small>
+                        </span>
+                    </a>
+
+
+                <p>
+                    A cheerful family-friendly petting zoo
+                    where little hands meet big hearts.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="home.html">Home</a>
+                <a href="animals.html">Our Animals</a>
+                <a href="experience.html">Experiences</a>
+                <a href="visit.html">Visit Us</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- INFORMATION -->
+            <div class="footer-column">
+
+                <h3>Information</h3>
+
+                <a href="visit.html">Opening Hours</a>
+                <a href="visit.html">Tickets</a>
+                <a href="bookings.html">Group Bookings</a>
+                <a href="#">FAQs</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-column contact-column">
+
+                <h3>Contact Us</h3>
+
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    ZooPark Farm
+                </a>
+
+                <a href="tel:+919090909090">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 9090909090
+                </a>
+
+                <a href="mailto:hello@zoopark.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@zoopark.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-inner">
+
+            <p>
+                © 2026 ZooPark. All Rights Reserved.
+            </p>
+
+            <div>
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+ <!-- JS -->
+    <script src="groupbooking.js"></script>
+
+</body>
+
+</html>
+          
