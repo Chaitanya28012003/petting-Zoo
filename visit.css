@@ -3054,3 +3054,10 @@ body.dark-mode .cta-box:hover {
         right: 15px;
     }
 }
+@media (max-width: 768px) {
+
+    .header-actions {
+        transform: translateX(15px);
+    }
+
+}

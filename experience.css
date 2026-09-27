@@ -2977,3 +2977,10 @@ body.dark-mode .footer-logo-caption {
     }
 
 }
+@media (max-width: 768px) {
+
+    .header-actions {
+        transform: translateX(15px);
+    }
+
+}

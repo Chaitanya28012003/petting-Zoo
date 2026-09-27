@@ -4087,3 +4087,10 @@ body.dark-mode .footer-logo-caption {
         color: #F7F8F5 !important;
     }
 }
+@media (max-width: 768px) {
+
+    .header-actions {
+        transform: translateX(8px);
+    }
+
+}
