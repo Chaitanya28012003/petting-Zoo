@@ -2819,3 +2819,161 @@ body.dark-mode .logo-caption,
 body.dark-mode .footer-logo-caption {
     color: #A5AEA7 !important;
 }
+/* =========================================================
+   EXPERIENCE CTA - MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .experience-cta {
+        width: 100%;
+        padding: 50px 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .experience-cta .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* CTA BOX */
+    .experience-cta .cta-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 28px;
+
+        padding: 38px 22px;
+        margin: 0;
+
+        border-radius: 24px;
+    }
+
+    /* CONTENT */
+    .experience-cta .cta-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* SMALL TITLE */
+    .experience-cta .section-label {
+        display: block;
+
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: 0.16em;
+
+        margin-bottom: 14px;
+    }
+
+    /* MAIN HEADING */
+    .experience-cta .cta-content h2 {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+
+        margin: 0 0 18px;
+
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    /* GREEN / ACCENT TEXT */
+    .experience-cta .cta-content h2 span {
+        display: inline;
+    }
+
+    /* DESCRIPTION */
+    .experience-cta .cta-content p {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        font-size: 15px;
+        line-height: 1.7;
+
+        margin: 0;
+    }
+
+    /* BUTTON AREA */
+    .experience-cta .cta-buttons {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    /* BUTTONS */
+    .experience-cta .cta-buttons .btn {
+        width: 100%;
+        max-width: 100%;
+        min-height: 52px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 14px 18px;
+
+        white-space: normal;
+    }
+
+}
+/* MOBILE HEADER - ONLY DARK + RTL */
+
+@media (max-width: 768px) {
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    #themeToggle,
+    #rtlToggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+/* MOBILE - HIDE BOOK A GROUP */
+
+@media (max-width: 768px) {
+
+    .header-cta {
+        display: none !important;
+    }
+
+}
+/* MOBILE MENU - MOVE LEFT */
+
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        position: relative;
+        right: 10px;
+    }
+
+}

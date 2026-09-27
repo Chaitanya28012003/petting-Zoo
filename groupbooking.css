@@ -3240,3 +3240,166 @@ body.dark-mode .cta-box:hover {
         transform: none !important;
     }
 }
+/* =========================================================
+   GROUP BOOKING CTA - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .group-cta {
+        width: 100%;
+        padding: 55px 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .group-cta .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* CTA CARD */
+    .group-cta .cta-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 28px;
+
+        padding: 38px 22px;
+        margin: 0;
+
+        border-radius: 24px;
+    }
+
+    /* CONTENT */
+    .group-cta .cta-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* SMALL LABEL */
+    .group-cta .section-label {
+        display: block;
+
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: 0.16em;
+
+        margin-bottom: 14px;
+    }
+
+    /* HEADING */
+    .group-cta .cta-content h2 {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px;
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+
+        margin: 0 0 18px;
+    }
+
+    .group-cta .cta-content h2 span {
+        display: inline;
+    }
+
+    /* DESCRIPTION */
+    .group-cta .cta-content p {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        font-size: 15px;
+        line-height: 1.7;
+
+        margin: 0;
+    }
+
+    /* BUTTONS */
+    .group-cta .cta-buttons {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .group-cta .cta-buttons .btn {
+        width: 100%;
+        max-width: 100%;
+        min-height: 52px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 14px 18px;
+    }
+
+    /* PLAN YOUR VISIT - PRIMARY BORDER */
+    .group-cta .btn-outline {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+    }
+
+    .group-cta .btn-outline:hover {
+        background: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+    }
+
+}
+/* MOBILE HEADER - ONLY DARK + RTL */
+
+@media (max-width: 768px) {
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    #themeToggle,
+    #rtlToggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+/* MOBILE - HIDE BOOK A GROUP */
+
+@media (max-width: 768px) {
+
+    .header-cta {
+        display: none !important;
+    }
+
+}
+/* MOBILE MENU - MOVE LEFT */
+
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        position: relative;
+        right: 15px;
+    }
+
+}

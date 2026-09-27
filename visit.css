@@ -1860,6 +1860,18 @@ body.dark-mode .mobile-menu-btn {
 
     flex-shrink: 0;
 }
+/* Contact Us button - Primary Border */
+.visit-cta-buttons .btn-outline {
+    background: transparent;
+    color: var(--dark);
+    border: 1px solid var(--dark);
+}
+
+.visit-cta-buttons .btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
 
 
 /* =========================================================
@@ -2995,5 +3007,50 @@ body.dark-mode .cta-box:hover {
     .booking-form:hover,
     .cta-box:hover {
         transform: none !important;
+    }
+}
+/* MOBILE HEADER - ONLY DARK + RTL */
+
+@media (max-width: 768px) {
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    #themeToggle,
+    #rtlToggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+/* MOBILE - HIDE BOOK A GROUP */
+
+@media (max-width: 768px) {
+
+    .header-cta {
+        display: none !important;
+    }
+
+}
+/* MOBILE MENU - MOVE LEFT */
+
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        position: relative;
+        right: 10px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        position: relative;
+        right: 15px;
     }
 }

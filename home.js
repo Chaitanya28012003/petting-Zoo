@@ -1,5 +1,5 @@
 /* =========================================================
-   ZOOPARK HOME 2 JS
+   PAWNEST / ZOOPARK HOME 2 JS
    PREMIUM / CINEMATIC VERSION
 ========================================================= */
 
@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const body = document.body;
     const html = document.documentElement;
-
 
     /* =====================================================
        ELEMENTS
@@ -32,10 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("nav");
 
     const dropdown =
-        document.querySelector(".nav-item.dropdown");
+        nav
+            ? nav.querySelector(".nav-item.dropdown")
+            : null;
 
     const dropdownToggle =
-        document.querySelector(".dropdown-toggle");
+        nav
+            ? nav.querySelector(".dropdown-toggle")
+            : null;
 
 
     /* =====================================================
@@ -43,55 +46,139 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     function getStoredTheme() {
+
         return (
             localStorage.getItem("farmTheme") ||
             localStorage.getItem("zoopark-theme") ||
             localStorage.getItem("pawnest-theme") ||
             "light"
         );
+
     }
+
 
     function setStoredTheme(theme) {
-        localStorage.setItem("farmTheme", theme);
-        localStorage.setItem("zoopark-theme", theme);
-        localStorage.setItem("pawnest-theme", theme);
+
+        localStorage.setItem(
+            "farmTheme",
+            theme
+        );
+
+        localStorage.setItem(
+            "zoopark-theme",
+            theme
+        );
+
+        localStorage.setItem(
+            "pawnest-theme",
+            theme
+        );
+
     }
+
 
     function applyTheme(theme) {
-        const isDark = theme === "dark";
+
+        const isDark =
+            theme === "dark";
+
+
         if (isDark) {
-            document.documentElement.classList.add("dark-mode");
-            body.classList.add("dark-mode");
+
+            html.classList.add(
+                "dark-mode"
+            );
+
+            body.classList.add(
+                "dark-mode"
+            );
+
         } else {
-            document.documentElement.classList.remove("dark-mode");
-            body.classList.remove("dark-mode");
+
+            html.classList.remove(
+                "dark-mode"
+            );
+
+            body.classList.remove(
+                "dark-mode"
+            );
+
         }
+
 
         if (themeToggle) {
-            const icon = themeToggle.querySelector("i");
+
+            const icon =
+                themeToggle.querySelector("i");
+
             if (icon) {
-                icon.className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+
+                icon.className =
+                    isDark
+                        ? "fa-solid fa-sun"
+                        : "fa-solid fa-moon";
+
             }
+
+
             if (themeText) {
-                themeText.textContent = isDark ? "Light" : "Dark";
+
+                themeText.textContent =
+                    isDark
+                        ? "Light"
+                        : "Dark";
+
             }
+
+
             themeToggle.setAttribute(
                 "aria-label",
-                isDark ? "Switch to light mode" : "Switch to dark mode"
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
             );
+
         }
+
     }
 
-    // Apply stored theme immediately on init
-    applyTheme(getStoredTheme());
+
+    applyTheme(
+        getStoredTheme()
+    );
+
 
     if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
-            const nextTheme = currentTheme === "dark" ? "light" : "dark";
-            setStoredTheme(nextTheme);
-            applyTheme(nextTheme);
-        });
+
+        themeToggle.addEventListener(
+            "click",
+            () => {
+
+                const currentTheme =
+                    body.classList.contains(
+                        "dark-mode"
+                    )
+                        ? "dark"
+                        : "light";
+
+
+                const nextTheme =
+                    currentTheme === "dark"
+                        ? "light"
+                        : "dark";
+
+
+                setStoredTheme(
+                    nextTheme
+                );
+
+                applyTheme(
+                    nextTheme
+                );
+
+            }
+        );
+
     }
 
 
@@ -100,39 +187,120 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     function getStoredDirection() {
+
         return (
-            localStorage.getItem("farmDirection") ||
-            localStorage.getItem("zoopark-direction") ||
+            localStorage.getItem(
+                "farmDirection"
+            ) ||
+            localStorage.getItem(
+                "zoopark-direction"
+            ) ||
             "ltr"
         );
+
     }
+
 
     function setStoredDirection(dir) {
-        localStorage.setItem("farmDirection", dir);
-        localStorage.setItem("zoopark-direction", dir);
+
+        localStorage.setItem(
+            "farmDirection",
+            dir
+        );
+
+        localStorage.setItem(
+            "zoopark-direction",
+            dir
+        );
+
     }
 
-    const savedDirection = getStoredDirection();
-    html.setAttribute("dir", savedDirection === "rtl" ? "rtl" : "ltr");
+
+    const savedDirection =
+        getStoredDirection();
+
+
+    html.setAttribute(
+        "dir",
+        savedDirection === "rtl"
+            ? "rtl"
+            : "ltr"
+    );
+
 
     if (rtlToggle) {
-        rtlToggle.addEventListener("click", () => {
-            const current = html.getAttribute("dir");
-            const next = current === "rtl" ? "ltr" : "rtl";
-            html.setAttribute("dir", next);
-            setStoredDirection(next);
-        });
+
+        rtlToggle.addEventListener(
+            "click",
+            () => {
+
+                const current =
+                    html.getAttribute(
+                        "dir"
+                    );
+
+
+                const next =
+                    current === "rtl"
+                        ? "ltr"
+                        : "rtl";
+
+
+                html.setAttribute(
+                    "dir",
+                    next
+                );
+
+
+                setStoredDirection(
+                    next
+                );
+
+            }
+        );
+
     }
 
-    // Listen to changes in other tabs/windows
-    window.addEventListener("storage", (e) => {
-        if (e.key === "farmTheme" || e.key === "zoopark-theme" || e.key === "pawnest-theme") {
-            applyTheme(e.newValue === "dark" ? "dark" : "light");
+
+    /* =====================================================
+       STORAGE LISTENER
+    ===================================================== */
+
+    window.addEventListener(
+        "storage",
+        (e) => {
+
+            if (
+                e.key === "farmTheme" ||
+                e.key === "zoopark-theme" ||
+                e.key === "pawnest-theme"
+            ) {
+
+                applyTheme(
+                    e.newValue === "dark"
+                        ? "dark"
+                        : "light"
+                );
+
+            }
+
+
+            if (
+                e.key === "farmDirection" ||
+                e.key === "zoopark-direction"
+            ) {
+
+                html.setAttribute(
+                    "dir",
+                    e.newValue === "rtl"
+                        ? "rtl"
+                        : "ltr"
+                );
+
+            }
+
         }
-        if (e.key === "farmDirection" || e.key === "zoopark-direction") {
-            html.setAttribute("dir", e.newValue === "rtl" ? "rtl" : "ltr");
-        }
-    });
+    );
 
 
     /* =====================================================
@@ -142,6 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateHeader() {
 
         if (!header) return;
+
 
         if (window.scrollY > 45) {
 
@@ -174,6 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        MOBILE MENU
+       ONE SINGLE MOBILE MENU SYSTEM
     ===================================================== */
 
     if (
@@ -183,32 +353,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mobileMenuBtn.addEventListener(
             "click",
-            () => {
+            (event) => {
 
-                nav.classList.toggle(
-                    "mobile-open"
+                event.preventDefault();
+                event.stopPropagation();
+
+
+                const isOpen =
+                    nav.classList.toggle(
+                        "mobile-open"
+                    );
+
+
+                mobileMenuBtn.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                        ? "true"
+                        : "false"
                 );
+
 
                 const icon =
                     mobileMenuBtn.querySelector(
                         "i"
                     );
 
-                if (!icon) return;
 
-                if (
-                    nav.classList.contains(
-                        "mobile-open"
-                    )
-                ) {
+                if (icon) {
 
                     icon.className =
-                        "fa-solid fa-xmark";
+                        isOpen
+                            ? "fa-solid fa-xmark"
+                            : "fa-solid fa-bars";
 
-                } else {
-
-                    icon.className =
-                        "fa-solid fa-bars";
                 }
 
             }
@@ -218,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       MOBILE DROPDOWN
+       MOBILE HOME DROPDOWN
     ===================================================== */
 
     if (
@@ -230,24 +407,18 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             (event) => {
 
-                event.preventDefault();
-
-                dropdown.classList.toggle(
-                    "open"
-                );
-
-            }
-        );
-
-        document.addEventListener(
-            "click",
-            (event) => {
-
                 if (
-                    dropdown &&
-                    !dropdown.contains(event.target)
+                    window.innerWidth <= 768
                 ) {
-                    dropdown.classList.remove("open");
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+
+                    dropdown.classList.toggle(
+                        "dropdown-open"
+                    );
+
                 }
 
             }
@@ -257,76 +428,166 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CLOSE MOBILE MENU
+       MOBILE NAV LINKS
     ===================================================== */
 
     if (nav) {
 
-        nav.querySelectorAll("a")
-            .forEach(link => {
+        nav.querySelectorAll(
+            ".nav-link:not(.dropdown-toggle), .dropdown-menu a"
+        ).forEach(
+            (link) => {
 
                 link.addEventListener(
                     "click",
                     () => {
 
-                        /*
-                         Keep dropdown open
-                         when dropdown toggle
-                         is clicked.
-                        */
-
                         if (
-                            link.classList.contains(
-                                "dropdown-toggle"
-                            )
+                            window.innerWidth <= 768
                         ) {
-                            return;
-                        }
 
-                        nav.classList.remove(
-                            "mobile-open"
-                        );
+                            nav.classList.remove(
+                                "mobile-open"
+                            );
 
-                        if (mobileMenuBtn) {
 
-                            const icon =
-                                mobileMenuBtn.querySelector(
-                                    "i"
+                            if (dropdown) {
+
+                                dropdown.classList.remove(
+                                    "dropdown-open"
                                 );
 
-                            if (icon) {
-
-                                icon.className =
-                                    "fa-solid fa-bars";
                             }
+
+
+                            if (mobileMenuBtn) {
+
+                                const icon =
+                                    mobileMenuBtn.querySelector(
+                                        "i"
+                                    );
+
+
+                                if (icon) {
+
+                                    icon.className =
+                                        "fa-solid fa-bars";
+
+                                }
+
+                            }
+
                         }
 
                     }
                 );
 
-            });
+            }
+        );
 
     }
 
 
     /* =====================================================
-       CLOSE DROPDOWN
+       CLICK OUTSIDE
     ===================================================== */
 
     document.addEventListener(
         "click",
-        event => {
+        (event) => {
 
             if (
-                dropdown &&
-                !dropdown.contains(
-                    event.target
-                )
+                !nav ||
+                !mobileMenuBtn
+            ) {
+                return;
+            }
+
+
+            if (
+                !nav.contains(event.target) &&
+                !mobileMenuBtn.contains(event.target)
             ) {
 
-                dropdown.classList.remove(
-                    "open"
+                nav.classList.remove(
+                    "mobile-open"
                 );
+
+
+                if (dropdown) {
+
+                    dropdown.classList.remove(
+                        "dropdown-open"
+                    );
+
+                }
+
+
+                const icon =
+                    mobileMenuBtn.querySelector(
+                        "i"
+                    );
+
+
+                if (icon) {
+
+                    icon.className =
+                        "fa-solid fa-bars";
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       RESET MOBILE MENU ON DESKTOP
+    ===================================================== */
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (
+                window.innerWidth > 768
+            ) {
+
+                if (nav) {
+
+                    nav.classList.remove(
+                        "mobile-open"
+                    );
+
+                }
+
+
+                if (dropdown) {
+
+                    dropdown.classList.remove(
+                        "dropdown-open"
+                    );
+
+                }
+
+
+                if (mobileMenuBtn) {
+
+                    const icon =
+                        mobileMenuBtn.querySelector(
+                            "i"
+                        );
+
+
+                    if (icon) {
+
+                        icon.className =
+                            "fa-solid fa-bars";
+
+                    }
+
+                }
 
             }
 
@@ -350,25 +611,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const revealObserver =
             new IntersectionObserver(
-                entries => {
+                (entries) => {
 
-                    entries.forEach(entry => {
+                    entries.forEach(
+                        (entry) => {
 
-                        if (
-                            entry.isIntersecting
-                        ) {
+                            if (
+                                entry.isIntersecting
+                            ) {
 
-                            entry.target.classList.add(
-                                "show"
-                            );
+                                entry.target.classList.add(
+                                    "show"
+                                );
 
-                            revealObserver.unobserve(
-                                entry.target
-                            );
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
 
                         }
-
-                    });
+                    );
 
                 },
                 {
@@ -381,7 +645,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         revealElements.forEach(
-            element => {
+            (element) => {
 
                 revealObserver.observe(
                     element
@@ -393,7 +657,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
 
         revealElements.forEach(
-            element => {
+            (element) => {
 
                 element.classList.add(
                     "show"
@@ -449,7 +713,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       HELPER
+       PARALLAX HELPER
     ===================================================== */
 
     function getParallaxMove(
@@ -459,37 +723,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!element) return 0;
 
+
         const rect =
             element.getBoundingClientRect();
+
 
         const viewportHeight =
             window.innerHeight;
 
-        /*
-         * Element center relative
-         * to viewport center.
-         */
 
         const elementCenter =
             rect.top +
             rect.height / 2;
 
+
         const viewportCenter =
             viewportHeight / 2;
+
 
         const distance =
             elementCenter -
             viewportCenter;
 
-        /*
-         * Convert distance into
-         * a small movement.
-         */
 
         return (
             -distance *
             strength
         );
+
     }
 
 
@@ -499,9 +760,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateParallax() {
 
-        /*
-         * HERO
-         */
+        /* HERO */
 
         if (heroImage) {
 
@@ -510,6 +769,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     heroImage,
                     0.035
                 );
+
 
             const limitedMove =
                 Math.max(
@@ -520,14 +780,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     )
                 );
 
+
             heroImage.style.transform =
                 `scale(1.08) translate3d(0, ${limitedMove}px, 0)`;
+
         }
 
 
-        /*
-         * INTRO
-         */
+        /* INTRO */
 
         if (introImage) {
 
@@ -536,6 +796,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     introImage,
                     0.028
                 );
+
 
             const limitedMove =
                 Math.max(
@@ -546,23 +807,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     )
                 );
 
+
             introImage.style.transform =
                 `scale(1.08) translate3d(0, ${limitedMove}px, 0)`;
+
         }
 
 
-        /*
-         * ANIMAL IMAGES
-         */
+        /* ANIMAL IMAGES */
 
         animalImages.forEach(
-            image => {
+            (image) => {
 
                 const move =
                     getParallaxMove(
                         image,
                         0.025
                     );
+
 
                 const limitedMove =
                     Math.max(
@@ -573,6 +835,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         )
                     );
 
+
                 image.style.transform =
                     `scale(1.08) translate3d(0, ${limitedMove}px, 0)`;
 
@@ -580,18 +843,17 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-        /*
-         * EXPERIENCE IMAGES
-         */
+        /* EXPERIENCE IMAGES */
 
         experienceImages.forEach(
-            image => {
+            (image) => {
 
                 const move =
                     getParallaxMove(
                         image,
                         0.023
                     );
+
 
                 const limitedMove =
                     Math.max(
@@ -602,6 +864,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         )
                     );
 
+
                 image.style.transform =
                     `scale(1.08) translate3d(0, ${limitedMove}px, 0)`;
 
@@ -609,9 +872,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-        /*
-         * VISIT
-         */
+        /* VISIT */
 
         if (visitImage) {
 
@@ -620,6 +881,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     visitImage,
                     0.04
                 );
+
 
             const limitedMove =
                 Math.max(
@@ -630,14 +892,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     )
                 );
 
+
             visitImage.style.transform =
                 `scale(1.08) translate3d(0, ${limitedMove}px, 0)`;
+
         }
 
 
-        /*
-         * GROUPS
-         */
+        /* GROUPS */
 
         if (groupsImage) {
 
@@ -646,6 +908,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     groupsImage,
                     0.028
                 );
+
 
             const limitedMove =
                 Math.max(
@@ -656,14 +919,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     )
                 );
 
+
             groupsImage.style.transform =
                 `scale(1.08) translate3d(0, ${limitedMove}px, 0)`;
+
         }
 
 
-        /*
-         * CTA
-         */
+        /* CTA */
 
         if (ctaImage) {
 
@@ -672,6 +935,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ctaImage,
                     0.022
                 );
+
 
             const limitedMove =
                 Math.max(
@@ -682,12 +946,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     )
                 );
 
+
             ctaImage.style.transform =
                 `scale(1.06) translate3d(0, ${limitedMove}px, 0)`;
+
         }
 
 
         ticking = false;
+
     }
 
 
@@ -706,6 +973,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
                 ticking = true;
+
             }
 
         },
@@ -714,10 +982,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
-
-    /* =====================================================
-       INITIAL PARALLAX
-    ===================================================== */
 
     updateParallax();
 
@@ -730,37 +994,44 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelectorAll(
             'a[href^="#"]'
         )
-        .forEach(anchor => {
+        .forEach(
+            (anchor) => {
 
-            anchor.addEventListener(
-                "click",
-                function(event) {
+                anchor.addEventListener(
+                    "click",
+                    function (event) {
 
-                    const id =
-                        this.getAttribute(
-                            "href"
-                        );
+                        const id =
+                            this.getAttribute(
+                                "href"
+                            );
 
-                    if (
-                        id === "#" ||
-                        !document.querySelector(id)
-                    ) {
-                        return;
+
+                        if (
+                            id === "#" ||
+                            !document.querySelector(id)
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        event.preventDefault();
+
+
+                        document
+                            .querySelector(id)
+                            .scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+
                     }
+                );
 
-                    event.preventDefault();
-
-                    document
-                        .querySelector(id)
-                        .scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-
-                }
-            );
-
-        });
+            }
+        );
 
 
     /* =====================================================
@@ -769,15 +1040,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document
         .querySelectorAll("img")
-        .forEach(img => {
+        .forEach(
+            (img) => {
 
-            img.addEventListener(
-                "dragstart",
-                event =>
-                    event.preventDefault()
-            );
+                img.addEventListener(
+                    "dragstart",
+                    (event) => {
 
-        });
+                        event.preventDefault();
+
+                    }
+                );
+
+            }
+        );
 
 
     /* =====================================================
@@ -788,42 +1064,44 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelectorAll(
             ".animal-feature, .experience-row"
         )
-        .forEach(card => {
+        .forEach(
+            (card) => {
 
-            card.addEventListener(
-                "touchstart",
-                () => {
+                card.addEventListener(
+                    "touchstart",
+                    () => {
 
-                    card.classList.add(
-                        "touch-active"
-                    );
+                        card.classList.add(
+                            "touch-active"
+                        );
 
-                },
-                {
-                    passive: true
-                }
-            );
+                    },
+                    {
+                        passive: true
+                    }
+                );
 
 
-            card.addEventListener(
-                "touchend",
-                () => {
+                card.addEventListener(
+                    "touchend",
+                    () => {
 
-                    setTimeout(
-                        () => {
+                        setTimeout(
+                            () => {
 
-                            card.classList.remove(
-                                "touch-active"
-                            );
+                                card.classList.remove(
+                                    "touch-active"
+                                );
 
-                        },
-                        180
-                    );
+                            },
+                            180
+                        );
 
-                }
-            );
+                    }
+                );
 
-        });
+            }
+        );
 
 
     /* =====================================================
@@ -832,6 +1110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let resizeTimer;
 
+
     window.addEventListener(
         "resize",
         () => {
@@ -839,6 +1118,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clearTimeout(
                 resizeTimer
             );
+
 
             resizeTimer =
                 setTimeout(
@@ -858,121 +1138,445 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       HERO ANIMAL ENCOUNTER SWITCHER (HOME 1)
+       HERO ANIMAL ENCOUNTER SWITCHER
     ===================================================== */
+
     const heroAnimalData = {
+
         goats: {
-            title: "Pygmy Goats & Baby Kids",
-            category: "Featured Farm Encounter",
-            time: "11:30 AM & 2:30 PM",
-            encounter: "Daily Bottle Feeding",
-            desc: "Inquisitive, gentle, and utterly sweet. Step right into the goat meadow with a fresh bowl of treats and let them nibble right from your hands.",
-            image: "https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=1200&q=85",
-            alt: "Playful pygmy goats at ZooPark"
+
+            title:
+                "Pygmy Goats & Baby Kids",
+
+            category:
+                "Featured Farm Encounter",
+
+            time:
+                "11:30 AM & 2:30 PM",
+
+            encounter:
+                "Daily Bottle Feeding",
+
+            desc:
+                "Inquisitive, gentle, and utterly sweet. Step right into the goat meadow with a fresh bowl of treats and let them nibble right from your hands.",
+
+            image:
+                "https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=1200&q=85",
+
+            alt:
+                "Playful pygmy goats at ZooPark"
+
         },
+
+
         rabbits: {
-            title: "Bunny Haven & Cuddle Village",
-            category: "Gentle Touch Zone",
-            time: "Open All Day",
-            encounter: "Lap Cuddles & Brushing",
-            desc: "Soft Rex rabbits and lop-eared bunnies waiting in cushioned lap baskets. Gentle, calm, and perfect for toddlers and children.",
-            image: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=1200&q=85",
-            alt: "Fluffy gentle rabbit at ZooPark"
+
+            title:
+                "Bunny Haven & Cuddle Village",
+
+            category:
+                "Gentle Touch Zone",
+
+            time:
+                "Open All Day",
+
+            encounter:
+                "Lap Cuddles & Brushing",
+
+            desc:
+                "Soft Rex rabbits and lop-eared bunnies waiting in cushioned lap baskets. Gentle, calm, and perfect for toddlers and children.",
+
+            image:
+                "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=1200&q=85",
+
+            alt:
+                "Fluffy gentle rabbit at ZooPark"
+
         },
+
+
         sheep: {
-            title: "Fluffy Lambs & Babydoll Sheep",
-            category: "Meadow Encounter",
-            time: "10:30 AM & 3:30 PM",
-            encounter: "Wool Grooming & Treats",
-            desc: "Feel the soft spring fleece of our friendly Babydoll sheep. Hand-feed alfalfa crunch and watch our baby lambs frolic in the clover pasture.",
-            image: "https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=1200&q=85",
-            alt: "Gentle sheep and lambs in meadow"
+
+            title:
+                "Fluffy Lambs & Babydoll Sheep",
+
+            category:
+                "Meadow Encounter",
+
+            time:
+                "10:30 AM & 3:30 PM",
+
+            encounter:
+                "Wool Grooming & Treats",
+
+            desc:
+                "Feel the soft spring fleece of our friendly Babydoll sheep. Hand-feed alfalfa crunch and watch our baby lambs frolic in the clover pasture.",
+
+            image:
+                "https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=1200&q=85",
+
+            alt:
+                "Gentle sheep and lambs in meadow"
+
         },
+
+
         ponies: {
-            title: "Miniature Ponies & Donkeys",
-            category: "Paddock Experience",
-            time: "1:00 PM – 4:00 PM",
-            encounter: "Pony Brushing & Petting",
-            desc: "Meet our sweet miniature Shetland ponies and friendly Mediterranean donkeys. Learn how to brush their manes and offer carrot treats.",
-            image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=85",
-            alt: "Miniature pony petting encounter"
+
+            title:
+                "Miniature Ponies & Donkeys",
+
+            category:
+                "Paddock Experience",
+
+            time:
+                "1:00 PM – 4:00 PM",
+
+            encounter:
+                "Pony Brushing & Petting",
+
+            desc:
+                "Meet our sweet miniature Shetland ponies and friendly Mediterranean donkeys. Learn how to brush their manes and offer carrot treats.",
+
+            image:
+                "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=85",
+
+            alt:
+                "Miniature pony petting encounter"
+
         }
+
     };
 
-    const animalTabs = document.querySelectorAll(".animal-tab");
-    const heroCardImg = document.getElementById("heroCardImg");
-    const heroCardTitle = document.getElementById("heroCardTitle");
-    const heroCardCategory = document.getElementById("heroCardCategory");
-    const heroCardTime = document.getElementById("heroCardTime");
-    const heroCardDesc = document.getElementById("heroCardDesc");
-    const heroCardEncounterType = document.getElementById("heroCardEncounterType");
-    const heroExperienceCard = document.getElementById("heroExperienceCard");
 
-    if (animalTabs.length && heroCardImg && heroCardTitle) {
-        animalTabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                const animalKey = tab.getAttribute("data-animal");
-                const data = heroAnimalData[animalKey];
-                if (!data) return;
+    const animalTabs =
+        document.querySelectorAll(
+            ".animal-tab"
+        );
 
-                // Update active tab button
-                animalTabs.forEach(t => t.classList.remove("active"));
-                tab.classList.add("active");
 
-                // Smooth fade transition
-                heroCardImg.style.opacity = "0.2";
-                heroCardImg.style.transform = "scale(0.97)";
+    const heroCardImg =
+        document.getElementById(
+            "heroCardImg"
+        );
 
-                setTimeout(() => {
-                    heroCardImg.src = data.image;
-                    heroCardImg.alt = data.alt;
-                    if (heroCardTitle) heroCardTitle.textContent = data.title;
-                    if (heroCardCategory) heroCardCategory.textContent = data.category;
-                    if (heroCardDesc) heroCardDesc.textContent = data.desc;
-                    if (heroCardEncounterType) heroCardEncounterType.textContent = data.encounter;
-                    if (heroCardTime) {
-                        heroCardTime.innerHTML = `<i class="fa-solid fa-bell"></i> ${data.time}`;
+
+    const heroCardTitle =
+        document.getElementById(
+            "heroCardTitle"
+        );
+
+
+    const heroCardCategory =
+        document.getElementById(
+            "heroCardCategory"
+        );
+
+
+    const heroCardTime =
+        document.getElementById(
+            "heroCardTime"
+        );
+
+
+    const heroCardDesc =
+        document.getElementById(
+            "heroCardDesc"
+        );
+
+
+    const heroCardEncounterType =
+        document.getElementById(
+            "heroCardEncounterType"
+        );
+
+
+    const heroExperienceCard =
+        document.getElementById(
+            "heroExperienceCard"
+        );
+
+
+    if (
+        animalTabs.length &&
+        heroCardImg &&
+        heroCardTitle
+    ) {
+
+        animalTabs.forEach(
+            (tab) => {
+
+                tab.addEventListener(
+                    "click",
+                    () => {
+
+                        const animalKey =
+                            tab.getAttribute(
+                                "data-animal"
+                            );
+
+
+                        const data =
+                            heroAnimalData[
+                                animalKey
+                            ];
+
+
+                        if (!data) return;
+
+
+                        animalTabs.forEach(
+                            (t) => {
+
+                                t.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        tab.classList.add(
+                            "active"
+                        );
+
+
+                        heroCardImg.style.opacity =
+                            "0.2";
+
+
+                        heroCardImg.style.transform =
+                            "scale(0.97)";
+
+
+                        setTimeout(
+                            () => {
+
+                                heroCardImg.src =
+                                    data.image;
+
+
+                                heroCardImg.alt =
+                                    data.alt;
+
+
+                                if (
+                                    heroCardTitle
+                                ) {
+
+                                    heroCardTitle.textContent =
+                                        data.title;
+
+                                }
+
+
+                                if (
+                                    heroCardCategory
+                                ) {
+
+                                    heroCardCategory.textContent =
+                                        data.category;
+
+                                }
+
+
+                                if (
+                                    heroCardDesc
+                                ) {
+
+                                    heroCardDesc.textContent =
+                                        data.desc;
+
+                                }
+
+
+                                if (
+                                    heroCardEncounterType
+                                ) {
+
+                                    heroCardEncounterType.textContent =
+                                        data.encounter;
+
+                                }
+
+
+                                if (
+                                    heroCardTime
+                                ) {
+
+                                    heroCardTime.innerHTML =
+                                        `<i class="fa-solid fa-bell"></i> ${data.time}`;
+
+                                }
+
+
+                                heroCardImg.style.opacity =
+                                    "1";
+
+
+                                heroCardImg.style.transform =
+                                    "scale(1)";
+
+
+                            },
+                            220
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           3D HERO CARD
+        ================================================= */
+
+        if (
+            window.matchMedia(
+                "(min-width: 992px)"
+            ).matches &&
+            heroExperienceCard
+        ) {
+
+            heroExperienceCard.addEventListener(
+                "mousemove",
+                (e) => {
+
+                    const rect =
+                        heroExperienceCard.getBoundingClientRect();
+
+
+                    const x =
+                        e.clientX -
+                        rect.left;
+
+
+                    const y =
+                        e.clientY -
+                        rect.top;
+
+
+                    const centerX =
+                        rect.width / 2;
+
+
+                    const centerY =
+                        rect.height / 2;
+
+
+                    const deltaX =
+                        (x - centerX) /
+                        centerX;
+
+
+                    const deltaY =
+                        (y - centerY) /
+                        centerY;
+
+
+                    heroExperienceCard.style.transform =
+                        `perspective(1000px) rotateY(${deltaX * 4}deg) rotateX(${-deltaY * 4}deg) translateY(-4px)`;
+
+                }
+            );
+
+
+            heroExperienceCard.addEventListener(
+                "mouseleave",
+                () => {
+
+                    heroExperienceCard.style.transform =
+                        "";
+
+                }
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       HERO EXPLORE FARM SCROLL
+    ===================================================== */
+
+    const heroScrollPrompt =
+        document.querySelector(
+            ".hero-scroll-prompt .scroll-link"
+        );
+
+
+    if (heroScrollPrompt) {
+
+        heroScrollPrompt.addEventListener(
+            "click",
+            (e) => {
+
+                e.preventDefault();
+
+
+                const heroElem =
+                    document.getElementById(
+                        "homeHero"
+                    ) ||
+                    document.querySelector(
+                        ".hero"
+                    );
+
+
+                if (heroElem) {
+
+                    const nextElem =
+                        heroElem.nextElementSibling;
+
+
+                    if (nextElem) {
+
+                        nextElem.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
                     }
 
-                    heroCardImg.style.opacity = "1";
-                    heroCardImg.style.transform = "scale(1)";
-                }, 220);
-            });
-        });
-
-        // 3D subtle tilt effect on desktop
-        if (window.matchMedia("(min-width: 992px)").matches && heroExperienceCard) {
-            heroExperienceCard.addEventListener("mousemove", (e) => {
-                const rect = heroExperienceCard.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const deltaX = (x - centerX) / centerX;
-                const deltaY = (y - centerY) / centerY;
-
-                heroExperienceCard.style.transform = `perspective(1000px) rotateY(${deltaX * 4}deg) rotateX(${-deltaY * 4}deg) translateY(-4px)`;
-            });
-
-            heroExperienceCard.addEventListener("mouseleave", () => {
-                heroExperienceCard.style.transform = "";
-            });
-        }
-    }
-
-    /* Hero Explore Farm Scroll Prompt */
-    const heroScrollPrompt = document.querySelector(".hero-scroll-prompt .scroll-link");
-    if (heroScrollPrompt) {
-        heroScrollPrompt.addEventListener("click", (e) => {
-            e.preventDefault();
-            const heroElem = document.getElementById("homeHero") || document.querySelector(".hero");
-            if (heroElem) {
-                const nextElem = heroElem.nextElementSibling;
-                if (nextElem) {
-                    nextElem.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
+
             }
-        });
+        );
+
     }
+
+});
+/* =========================================
+   MOBILE BOOK A GROUP
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const nav = document.getElementById("nav");
+
+    if (!nav) return;
+
+    nav.addEventListener("click", function (event) {
+
+        const rect = nav.getBoundingClientRect();
+
+        /*
+         * Book a Group pseudo button area
+         * is the bottom part of the mobile menu.
+         */
+
+        if (
+            nav.classList.contains("mobile-open") &&
+            event.clientY >= rect.bottom - 70
+        ) {
+
+            window.location.href = "book.html";
+
+        }
+
+    });
 
 });

@@ -4248,3 +4248,374 @@ body.dark-mode .footer-logo-caption {
         animation: none !important;
     }
 }
+/* =========================================================
+   HOME 2 - MOBILE HERO SCRIPT SIZE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-copy .hero2-script {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px !important;
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: -0.025em;
+        margin-bottom: 8px;
+    }
+
+}
+/* =========================================================
+   HOME 2 - MOBILE HEADER
+   DARK + RTL + MENU
+   ADD AT THE VERY END OF CSS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        width: 100%;
+        z-index: 100000;
+    }
+
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+
+    /* =========================================
+       HEADER ACTIONS
+       ========================================= */
+
+    .header-actions {
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 6px;
+
+        margin-left: auto;
+    }
+
+
+    /* =========================================
+       DARK + RTL BUTTONS
+       ========================================= */
+
+    .header-control {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        height: 42px;
+
+        min-width: 42px;
+
+        padding: 0 10px;
+
+        background: var(--white);
+
+        color: var(--dark);
+
+        border: 1px solid var(--secondary);
+
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        font-size: 12px;
+        font-weight: 700;
+
+        box-sizing: border-box;
+    }
+
+
+    #themeToggle {
+        width: 42px;
+        min-width: 42px;
+
+        padding: 0;
+    }
+
+
+    #rtlToggle {
+        width: 48px;
+        min-width: 48px;
+
+        padding: 0;
+    }
+
+
+    /* =========================================
+       HIDE DESKTOP BOOK BUTTON
+       ========================================= */
+
+    .header-cta {
+        display: none;
+    }
+
+
+    /* =========================================
+       MOBILE MENU BUTTON
+       ========================================= */
+
+    .mobile-menu-btn {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+
+        background: var(--white);
+
+        color: var(--dark);
+
+        border: 1px solid var(--secondary);
+
+        border-radius: 10px;
+
+        font-size: 17px;
+
+        cursor: pointer;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================================
+       MOBILE NAV
+       ========================================= */
+
+    .nav.mobile-open {
+
+        display: block;
+
+        position: absolute;
+
+        top: calc(100% + 8px);
+
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+
+        padding: 10px 18px 18px;
+
+        background: var(--white);
+
+        border: 1px solid var(--border);
+
+        border-radius: 0 0 22px 22px;
+
+        box-shadow:
+            0 15px 40px rgba(23, 35, 27, 0.15);
+
+        z-index: 99999;
+
+        max-height: calc(100vh - 90px);
+
+        overflow-y: auto;
+    }
+
+
+    /* NAV ITEMS */
+
+    .nav.mobile-open .nav-item {
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        border-bottom: 1px solid #edf0eb;
+    }
+
+
+    /* NAV LINKS */
+
+    .nav.mobile-open .nav-link {
+
+        width: 100%;
+
+        min-height: 58px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 0 6px;
+
+        color: var(--dark);
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        text-decoration: none;
+    }
+
+
+    .nav.mobile-open .nav-link:hover {
+        color: var(--primary);
+    }
+
+
+    /* =========================================
+       HOME DROPDOWN
+       ========================================= */
+
+    .nav.mobile-open .dropdown-menu {
+
+        display: none;
+
+        position: static;
+
+        width: 100%;
+
+        padding: 0 0 6px;
+
+        background: var(--light);
+
+        border: 0;
+
+        box-shadow: none;
+    }
+
+
+    .nav.mobile-open .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+
+    .nav.mobile-open .dropdown-menu a {
+
+        display: block;
+
+        padding: 12px;
+
+        color: var(--text);
+
+        font-size: 14px;
+
+        text-decoration: none;
+    }
+
+
+    /* =========================================
+       DARK MODE - MOBILE
+       ========================================= */
+
+    body.dark-mode .header-control,
+    body.dark-mode .mobile-menu-btn {
+
+        background: var(--dark);
+
+        color: var(--white);
+
+        border-color: var(--secondary);
+    }
+
+
+    body.dark-mode .nav.mobile-open {
+
+        background: var(--dark);
+
+        border-color: #35463A;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.45);
+    }
+
+
+    body.dark-mode .nav.mobile-open .nav-item {
+
+        border-bottom-color: #35463A;
+    }
+
+
+    body.dark-mode .nav.mobile-open .nav-link {
+
+        color: var(--white);
+    }
+
+
+    body.dark-mode .nav.mobile-open .nav-link:hover {
+
+        color: var(--secondary);
+    }
+
+
+    body.dark-mode .nav.mobile-open .dropdown-menu {
+
+        background: #202D24;
+    }
+
+
+    body.dark-mode .nav.mobile-open .dropdown-menu a {
+
+        color: #E8EEE9;
+    }
+
+
+    /* =========================================
+       RTL MOBILE
+       ========================================= */
+
+    html[dir="rtl"] .header-inner {
+
+        direction: rtl;
+    }
+
+
+    html[dir="rtl"] .header-actions {
+
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+
+    html[dir="rtl"] .nav.mobile-open {
+
+        text-align: right;
+    }
+
+}
+/* =========================================================
+   MOBILE MENU BUTTON - MOVE SLIGHTLY LEFT
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        position: relative;
+        right: 3px;
+    }
+
+}
+/* =========================================================
+   MOBILE - DARK + RTL MOVE RIGHT
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #themeToggle,
+    #rtlToggle {
+        position: relative;
+        left: 10px;
+    }
+
+}

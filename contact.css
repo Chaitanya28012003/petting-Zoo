@@ -2728,3 +2728,117 @@ body.dark-mode .faq-list details:hover {
         transform: translateY(-5px);
     }
 }
+/* MOBILE HEADER - ONLY DARK + RTL */
+
+@media (max-width: 768px) {
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    #themeToggle,
+    #rtlToggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+/* MOBILE - HIDE BOOK A GROUP */
+
+@media (max-width: 768px) {
+
+    .header-cta {
+        display: none !important;
+    }
+
+}
+/* MOBILE MENU - MOVE LEFT */
+
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        position: relative;
+        right: 10px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        position: relative;
+        right: 15px;
+    }
+}
+@media (max-width: 768px) {
+
+    /* =========================================
+       BOOK A GROUP IN MOBILE MENU
+    ========================================= */
+
+    .nav .header-cta {
+        display: none;
+    }
+
+
+    .nav.mobile-open .header-cta.mobile-book-link {
+
+        display: flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        width: 100%;
+        min-height: 52px;
+
+        margin-top: 16px;
+        margin-bottom: 5px;
+
+        padding: 0 18px;
+
+        background: var(--primary);
+        color: var(--white);
+
+        border-radius: 28px;
+
+        font-size: 15px;
+        font-weight: 700;
+
+        text-decoration: none;
+
+        box-sizing: border-box;
+
+        cursor: pointer;
+    }
+
+
+    .nav.mobile-open .header-cta.mobile-book-link i {
+        font-size: 16px;
+    }
+
+
+    .nav.mobile-open .header-cta.mobile-book-link:hover {
+        background: var(--primary-dark);
+        color: var(--white);
+    }
+
+
+    /* =========================================
+       DARK MODE
+    ========================================= */
+
+    body.dark-mode
+    .nav.mobile-open
+    .header-cta.mobile-book-link {
+
+        background: var(--secondary);
+        color: var(--dark);
+    }
+
+}
+
